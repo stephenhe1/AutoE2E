@@ -1,0 +1,13 @@
+{
+  "app": "REALWORLD",
+  "started_at": "2026-07-21T15:24:06.343721",
+  "elapsed_seconds": 498.3,
+  "loop_counter": 36,
+  "queue_size": 0,
+  "states_discovered": 3,
+  "current_state": "DONE",
+  "current_action": null,
+  "last_updated": "2026-07-21T15:32:24.684840",
+  "status": "running",
+  "error": null
+}

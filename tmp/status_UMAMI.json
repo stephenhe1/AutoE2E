@@ -1,0 +1,13 @@
+{
+  "app": "UMAMI",
+  "started_at": "2026-07-21T17:48:34.566933",
+  "elapsed_seconds": 136.1,
+  "loop_counter": 5,
+  "queue_size": 0,
+  "states_discovered": 1,
+  "current_state": "DONE",
+  "current_action": null,
+  "last_updated": "2026-07-21T17:50:50.621217",
+  "status": "running",
+  "error": null
+}

@@ -1,0 +1,12 @@
+{
+  "temp_dir": "./tmp",
+  "driver": {
+    "base_url": "http://localhost:3003/en/"
+  },
+  "lifecycle": {
+    "on_visit": [],
+    "on_state_discovery": [
+      ["autoe2e", "StateContextExtraction"]
+    ]
+  }
+}

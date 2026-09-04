@@ -1,0 +1,22 @@
+{
+  "action-functionality": {
+    "total": 220,
+    "by_app": {
+      "CYPRESS_RWA": 4,
+      "TASKCAFE": 3,
+      "REALWORLD": 12,
+      "UMAMI": 4,
+      "REACT_BOILERPLATE": 197
+    }
+  },
+  "functionality": {
+    "total": 57,
+    "by_app": {
+      "CYPRESS_RWA": 3,
+      "REALWORLD": 9,
+      "TASKCAFE": 2,
+      "UMAMI": 4,
+      "REACT_BOILERPLATE": 39
+    }
+  }
+}

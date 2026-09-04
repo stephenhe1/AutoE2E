@@ -1,0 +1,13 @@
+{
+  "app": "TASKCAFE",
+  "started_at": "2026-07-21T15:24:06.344307",
+  "elapsed_seconds": 81.6,
+  "loop_counter": 2,
+  "queue_size": 0,
+  "states_discovered": 1,
+  "current_state": "DONE",
+  "current_action": null,
+  "last_updated": "2026-07-21T15:25:27.920950",
+  "status": "running",
+  "error": null
+}

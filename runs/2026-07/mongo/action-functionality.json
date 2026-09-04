@@ -1,0 +1,3962 @@
+[
+  {
+    "_id": {
+      "$oid": "6a5f916793ecf1902f3d50e3"
+    },
+    "app": "CYPRESS_RWA",
+    "url": "http://localhost:3000/signin",
+    "state": "b6ddb4b83e44ad984e2db595b5d097e1361d401fa3526dc3f835c8da546b2ddf",
+    "prev_state": null,
+    "action": "//BODY/DIV[1]/DIV[1]/MAIN[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5f915593ecf1902f3d50e0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5f916793ecf1902f3d50e4"
+    },
+    "app": "CYPRESS_RWA",
+    "url": "http://localhost:3000/signin",
+    "state": "b6ddb4b83e44ad984e2db595b5d097e1361d401fa3526dc3f835c8da546b2ddf",
+    "prev_state": null,
+    "action": "//BODY/DIV[1]/DIV[1]/MAIN[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5f915893ecf1902f3d50e1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5f916793ecf1902f3d50e5"
+    },
+    "app": "CYPRESS_RWA",
+    "url": "http://localhost:3000/signin",
+    "state": "b6ddb4b83e44ad984e2db595b5d097e1361d401fa3526dc3f835c8da546b2ddf",
+    "prev_state": null,
+    "action": "//BODY/DIV[1]/DIV[1]/MAIN[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5f915593ecf1902f3d50e0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5f916793ecf1902f3d50e6"
+    },
+    "app": "CYPRESS_RWA",
+    "url": "http://localhost:3000/signin",
+    "state": "b6ddb4b83e44ad984e2db595b5d097e1361d401fa3526dc3f835c8da546b2ddf",
+    "prev_state": null,
+    "action": "//BODY/DIV[1]/DIV[1]/MAIN[1]/DIV[1]/FORM[1]/DIV[1]/DIV[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a5f916793ecf1902f3d50e2",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78a29fffa7200231b74"
+    },
+    "app": "TASKCAFE",
+    "url": "http://localhost:3334/",
+    "state": "227926f4754410f3ee134284ed25584e351672a7c6de6197472f69dbff946d33",
+    "prev_state": null,
+    "action": "root",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5fc77e29fffa7200231b72",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78a29fffa7200231b75"
+    },
+    "app": "TASKCAFE",
+    "url": "http://localhost:3334/",
+    "state": "227926f4754410f3ee134284ed25584e351672a7c6de6197472f69dbff946d33",
+    "prev_state": null,
+    "action": "root",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5fc77e29fffa7200231b72",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78a29fffa7200231b76"
+    },
+    "app": "TASKCAFE",
+    "url": "http://localhost:3334/",
+    "state": "227926f4754410f3ee134284ed25584e351672a7c6de6197472f69dbff946d33",
+    "prev_state": null,
+    "action": "root",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5fc78a29fffa7200231b73",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78c178a0b8d0251d83b"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5fc77c178a0b8d0251d838",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78c178a0b8d0251d83c"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5fc77c178a0b8d0251d838",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78c178a0b8d0251d83d"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5fc789178a0b8d0251d839",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc78c178a0b8d0251d83e"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a5fc78c178a0b8d0251d83a",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc7d9178a0b8d0251d843"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5fc7c3178a0b8d0251d83f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc7d9178a0b8d0251d844"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5fc7c6178a0b8d0251d840",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc7d9178a0b8d0251d845"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5fc7ca178a0b8d0251d841",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc7d9178a0b8d0251d846"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a5fc7d9178a0b8d0251d842",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc817178a0b8d0251d849"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[3]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5fc802178a0b8d0251d847",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc817178a0b8d0251d84a"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[3]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5fc802178a0b8d0251d847",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc817178a0b8d0251d84b"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[3]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5fc813178a0b8d0251d848",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fc817178a0b8d0251d84c"
+    },
+    "app": "REALWORLD",
+    "url": "http://localhost:4200/",
+    "state": "3511e001dde2b9581cf7887b5298c918344860943927c8556c19fc676c3a47e0",
+    "prev_state": null,
+    "action": "//BODY/APP-ROOT[1]/APP-LAYOUT-HEADER[1]/NAV[1]/DIV[1]/UL[1]/LI[3]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a5fc78c178a0b8d0251d83a",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fe97ef9a919dde44095f3"
+    },
+    "app": "UMAMI",
+    "url": "http://localhost:3002/login",
+    "state": "08bbf85767442984a21f478ec81f6c0e87b29420514536f68e4d6772b032d661",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/FORM[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a5fe973f9a919dde44095ef",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fe97ef9a919dde44095f4"
+    },
+    "app": "UMAMI",
+    "url": "http://localhost:3002/login",
+    "state": "08bbf85767442984a21f478ec81f6c0e87b29420514536f68e4d6772b032d661",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/FORM[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a5fe975f9a919dde44095f0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fe97ef9a919dde44095f5"
+    },
+    "app": "UMAMI",
+    "url": "http://localhost:3002/login",
+    "state": "08bbf85767442984a21f478ec81f6c0e87b29420514536f68e4d6772b032d661",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/FORM[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a5fe978f9a919dde44095f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a5fe97ef9a919dde44095f6"
+    },
+    "app": "UMAMI",
+    "url": "http://localhost:3002/login",
+    "state": "08bbf85767442984a21f478ec81f6c0e87b29420514536f68e4d6772b032d661",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/FORM[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a5fe97ef9a919dde44095f2",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdc4fe7841a382d9f6a0"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fdb2fe7841a382d9f69d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdc4fe7841a382d9f6a1"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fdc1fe7841a382d9f69e",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdc4fe7841a382d9f6a2"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fdc4fe7841a382d9f69f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdfdfe7841a382d9f6a5"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdfdfe7841a382d9f6a6"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fdfdfe7841a382d9f6a7"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe45fe7841a382d9f6ac"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe45fe7841a382d9f6ad"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fe3bfe7841a382d9f6a9",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe45fe7841a382d9f6ae"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe40fe7841a382d9f6aa",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe45fe7841a382d9f6af"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe45fe7841a382d9f6ab",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe88fe7841a382d9f6b3"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe76fe7841a382d9f6b0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe88fe7841a382d9f6b4"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe88fe7841a382d9f6b5"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe76fe7841a382d9f6b0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fe88fe7841a382d9f6b6"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe88fe7841a382d9f6b2",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fed1fe7841a382d9f6b9"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fed1fe7841a382d9f6ba"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a60fed1fe7841a382d9f6bb"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "prev_state": null,
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": null,
+    "test_id": null,
+    "depth": 0,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fed1fe7841a382d9f6b8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6100dafe7841a382d9f6be"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6100dafe7841a382d9f6bf"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6100cdfe7841a382d9f6bc",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6100dafe7841a382d9f6c0"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6100dafe7841a382d9f6c1"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a61022bfe7841a382d9f6d5",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610109fe7841a382d9f6c2"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610109fe7841a382d9f6c3"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6100cdfe7841a382d9f6bc",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610109fe7841a382d9f6c4"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610109fe7841a382d9f6c5"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61014ffe7841a382d9f6c8"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61014ffe7841a382d9f6c9"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61014ffe7841a382d9f6ca"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61014ffe7841a382d9f6cb"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a61022bfe7841a382d9f6d5",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101a2fe7841a382d9f6cd"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101a2fe7841a382d9f6ce"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101a2fe7841a382d9f6cf"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101c6fe7841a382d9f6d0"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101c6fe7841a382d9f6d1"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6101c6fe7841a382d9f6d2"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61022bfe7841a382d9f6d6"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61022bfe7841a382d9f6d7"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61022bfe7841a382d9f6d8"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61022bfe7841a382d9f6d9"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a61022bfe7841a382d9f6d5",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610259fe7841a382d9f6db"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610259fe7841a382d9f6dc"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610259fe7841a382d9f6dd"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610259fe7841a382d9f6de"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[6]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61029bfe7841a382d9f6e0"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61029bfe7841a382d9f6e1"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61029bfe7841a382d9f6e2"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61022bfe7841a382d9f6d5",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61029bfe7841a382d9f6e3"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6102d0fe7841a382d9f6e4"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6102d0fe7841a382d9f6e5"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6102d0fe7841a382d9f6e6"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6102d0fe7841a382d9f6e7"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en",
+    "state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[7]",
+    "prev_action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61032afe7841a382d9f6e8"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fdb2fe7841a382d9f69d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61032afe7841a382d9f6e9"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fdb2fe7841a382d9f69d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61034afe7841a382d9f6ea"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fdb2fe7841a382d9f69d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61034afe7841a382d9f6eb"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/A[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fdb2fe7841a382d9f69d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61036efe7841a382d9f6ee"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61036efe7841a382d9f6ef"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61036efe7841a382d9f6f0"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61036efe7841a382d9f6ed",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610392fe7841a382d9f6f2"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610392fe7841a382d9f6f3"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610392fe7841a382d9f6f4"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61036efe7841a382d9f6ed",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610392fe7841a382d9f6f5"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103cefe7841a382d9f6f7"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103cefe7841a382d9f6f8"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103cefe7841a382d9f6f9"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103cefe7841a382d9f6fa"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103fdfe7841a382d9f6fb"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103fdfe7841a382d9f6fc"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103fdfe7841a382d9f6fd"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6103fdfe7841a382d9f6fe"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-in",
+    "state": "a646e67a5230dfdf145b42968a5ed32cf4adca4e6e628e18b29b71d9afea1bb0",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104bffe7841a382d9f6ff"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104bffe7841a382d9f700"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104bffe7841a382d9f701"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61036efe7841a382d9f6ed",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104e8fe7841a382d9f702"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104e8fe7841a382d9f703"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610392fe7841a382d9f6f1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6104e8fe7841a382d9f704"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/sign-up",
+    "state": "f7c3a4dcc9fbd404dc20e7cdbcedc1e6af3c507e417f813545931a71da5d3f95",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[1]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61036efe7841a382d9f6ed",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105bafe7841a382d9f706"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105bafe7841a382d9f707"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105bafe7841a382d9f708"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105dcfe7841a382d9f709"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105dcfe7841a382d9f70a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6105dcfe7841a382d9f70b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/en/privacy-policy",
+    "state": "a1740473b0df9cee2aa3aad40a9352b5c1ab24a04ac190b192849461cbfbd0d7",
+    "prev_state": "1983410d085648b4f5a47bc9eaf1f5c0fe1544b234121db5616461a05e6a604f",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "test_id": null,
+    "depth": 1,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106b6fe7841a382d9f70e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106b6fe7841a382d9f70f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a61069ffe7841a382d9f70d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106b6fe7841a382d9f710"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106b6fe7841a382d9f711"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106b6fe7841a382d9f712"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106e6fe7841a382d9f713"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106e6fe7841a382d9f714"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6100cdfe7841a382d9f6bc",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106e6fe7841a382d9f715"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106e6fe7841a382d9f716"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6106e6fe7841a382d9f717"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61074afe7841a382d9f71a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe40fe7841a382d9f6aa",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61074afe7841a382d9f71b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61074afe7841a382d9f71c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe3bfe7841a382d9f6a9",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61074afe7841a382d9f71d"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61074afe7841a382d9f71e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a61074afe7841a382d9f719",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610789fe7841a382d9f721"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610789fe7841a382d9f722"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6100cdfe7841a382d9f6bc",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610789fe7841a382d9f723"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610789fe7841a382d9f724"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610789fe7841a382d9f725"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610789fe7841a382d9f720",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6107e0fe7841a382d9f729"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6107e0fe7841a382d9f72a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6107e0fe7841a382d9f72b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6107d9fe7841a382d9f727",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6107e0fe7841a382d9f72c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a6107e0fe7841a382d9f728",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61081afe7841a382d9f72e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61081afe7841a382d9f72f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6107d9fe7841a382d9f727",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61081afe7841a382d9f730"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61081afe7841a382d9f731"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610814fe7841a382d9f72d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a61081afe7841a382d9f732"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/ar",
+    "state": "ac0991f617e4ddb71c469f6fa7fe23d9357955a0cb904305b911a51624575f29",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[2]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108c7fe7841a382d9f733"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108c7fe7841a382d9f734"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108c7fe7841a382d9f735"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108c7fe7841a382d9f736"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108fcfe7841a382d9f738"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108fcfe7841a382d9f739"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108fcfe7841a382d9f73a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108fcfe7841a382d9f73b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6108fcfe7841a382d9f73c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a6108fcfe7841a382d9f737",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610987fe7841a382d9f73e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610987fe7841a382d9f73f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610987fe7841a382d9f740"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a61097bfe7841a382d9f73d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610987fe7841a382d9f741"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe40fe7841a382d9f6aa",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610987fe7841a382d9f742"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6109c9fe7841a382d9f744"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6109c9fe7841a382d9f745"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6109c9fe7841a382d9f746"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe40fe7841a382d9f6aa",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6109c9fe7841a382d9f747"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a6109c9fe7841a382d9f748"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a6109c9fe7841a382d9f743",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a22fe7841a382d9f74a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a22fe7841a382d9f74b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610a14fe7841a382d9f749",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a22fe7841a382d9f74c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610a14fe7841a382d9f749",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a22fe7841a382d9f74d"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe88fe7841a382d9f6b2",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a55fe7841a382d9f74e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe76fe7841a382d9f6b0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a55fe7841a382d9f74f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610a14fe7841a382d9f749",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a55fe7841a382d9f750"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a60fe76fe7841a382d9f6b0",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610a55fe7841a382d9f751"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610abefe7841a382d9f753"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610abefe7841a382d9f754"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610abefe7841a382d9f755"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610aaffe7841a382d9f752",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610abefe7841a382d9f756"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610aebfe7841a382d9f757"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610aebfe7841a382d9f758"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610aebfe7841a382d9f759"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610aebfe7841a382d9f75a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/es",
+    "state": "98a756b240b9ab609359f2d31a31e784e98fcc1b4fc980bf98101744f012422d",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[3]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b5bfe7841a382d9f75b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b5bfe7841a382d9f75c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b5bfe7841a382d9f75d"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b5bfe7841a382d9f75e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b83fe7841a382d9f75f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b83fe7841a382d9f760"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b83fe7841a382d9f761"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610b83fe7841a382d9f762"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a6108fcfe7841a382d9f737",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610beffe7841a382d9f764"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610beffe7841a382d9f765"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610beffe7841a382d9f766"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610789fe7841a382d9f720",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610beffe7841a382d9f767"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610be5fe7841a382d9f763",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610beffe7841a382d9f768"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a60fe45fe7841a382d9f6ab",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610c2dfe7841a382d9f76a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610c08fe7841a382d9f769",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610c2dfe7841a382d9f76b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610c2dfe7841a382d9f76c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610c2dfe7841a382d9f76d"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a61074afe7841a382d9f719",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610cdafe7841a382d9f771"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610cdafe7841a382d9f772"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610cdafe7841a382d9f773"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610cdafe7841a382d9f774"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610cdafe7841a382d9f770",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d10fe7841a382d9f775"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d10fe7841a382d9f776"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d10fe7841a382d9f777"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610caefe7841a382d9f76f",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d10fe7841a382d9f778"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/fr",
+    "state": "83aad497700677f87753a9d997f3cc47a796aa33e542edf4d7424770a5f36f91",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/MAIN[1]/DIV[1]/DIV[1]/DIV[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[4]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a6105a9fe7841a382d9f705",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d6bfe7841a382d9f779"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d6bfe7841a382d9f77a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d6bfe7841a382d9f77b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6108fcfe7841a382d9f737",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d6bfe7841a382d9f77c"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d9cfe7841a382d9f77d"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d9cfe7841a382d9f77e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610695fe7841a382d9f70c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d9cfe7841a382d9f77f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a6103c4fe7841a382d9f6f6",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610d9cfe7841a382d9f780"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/HEADER[1]/DIV[1]/DIV[1]/BUTTON[2]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e1ffe7841a382d9f782"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e1ffe7841a382d9f783"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e1ffe7841a382d9f784"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610789fe7841a382d9f720",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e1ffe7841a382d9f785"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e1ffe7841a382d9f786"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610be5fe7841a382d9f763",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e60fe7841a382d9f787"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e60fe7841a382d9f788"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a60fe38fe7841a382d9f6a8",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e60fe7841a382d9f789"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610e00fe7841a382d9f781",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e60fe7841a382d9f78a"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe40fe7841a382d9f6aa",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610e60fe7841a382d9f78b"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[1]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.959593226938118,
+    "func_pointer": "6a610248fe7841a382d9f6da",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610eb4fe7841a382d9f78e"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610eb4fe7841a382d9f78f"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610ea9fe7841a382d9f78c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610eb4fe7841a382d9f790"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610eaefe7841a382d9f78d",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610eb4fe7841a382d9f791"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "SINGLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a60fe88fe7841a382d9f6b2",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610ef1fe7841a382d9f794"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -0.916290731874155,
+    "func_pointer": "6a60fe7cfe7841a382d9f6b1",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610ef1fe7841a382d9f795"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.4271163556401458,
+    "func_pointer": "6a610ea9fe7841a382d9f78c",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610ef1fe7841a382d9f796"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -1.9379419794061366,
+    "func_pointer": "6a610ee7fe7841a382d9f792",
+    "final": false,
+    "should_execute": true
+  },
+  {
+    "_id": {
+      "$oid": "6a610ef1fe7841a382d9f797"
+    },
+    "app": "REACT_BOILERPLATE",
+    "url": "http://localhost:3003/hi",
+    "state": "ffb87cc6d8e3a12a96bcfceea6bf49939d5c3cd25bdfa613f4234037b4df6bac",
+    "prev_state": "356e2648eb85f1b32bbf9ad5fc36e5cf6d4fc880c66be6e3f3f5e2a34e62637a",
+    "action": "//BODY/DIV[2]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[2]/UL[1]/LI[2]/A[1]",
+    "prev_action": "//BODY/DIV[4]/DIV[1]/DIV[1]/DIV[5]",
+    "test_id": null,
+    "depth": 2,
+    "type": "DOUBLE",
+    "rank_score": -2.448767603172127,
+    "func_pointer": "6a610ef1fe7841a382d9f793",
+    "final": false,
+    "should_execute": true
+  }
+]
