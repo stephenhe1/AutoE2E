@@ -1,0 +1,1414 @@
+[
+  {
+    "repo": "Adamant-im/adamant-im",
+    "url": "https://github.com/Adamant-im/adamant-im"
+  },
+  {
+    "repo": "AgnosticUI/agnosticui",
+    "url": "https://github.com/AgnosticUI/agnosticui"
+  },
+  {
+    "repo": "AudiusProject/apps",
+    "url": "https://github.com/AudiusProject/apps"
+  },
+  {
+    "repo": "Awesome-Technologies/synapse-admin",
+    "url": "https://github.com/Awesome-Technologies/synapse-admin"
+  },
+  {
+    "repo": "BabylonJS/Spector.js",
+    "url": "https://github.com/BabylonJS/Spector.js"
+  },
+  {
+    "repo": "Blazity/enterprise-commerce",
+    "url": "https://github.com/Blazity/enterprise-commerce"
+  },
+  {
+    "repo": "Blazity/next-enterprise",
+    "url": "https://github.com/Blazity/next-enterprise"
+  },
+  {
+    "repo": "BuilderIO/builder",
+    "url": "https://github.com/BuilderIO/builder"
+  },
+  {
+    "repo": "ChromeDevTools/devtools-frontend",
+    "url": "https://github.com/ChromeDevTools/devtools-frontend"
+  },
+  {
+    "repo": "CirclonGroup/angular-tree-component",
+    "url": "https://github.com/CirclonGroup/angular-tree-component"
+  },
+  {
+    "repo": "Coding-Coach/find-a-mentor",
+    "url": "https://github.com/Coding-Coach/find-a-mentor"
+  },
+  {
+    "repo": "Comfy-Org/ComfyUI_frontend",
+    "url": "https://github.com/Comfy-Org/ComfyUI_frontend"
+  },
+  {
+    "repo": "CopilotKit/CopilotKit",
+    "url": "https://github.com/CopilotKit/CopilotKit"
+  },
+  {
+    "repo": "Dictionarry-Hub/profilarr",
+    "url": "https://github.com/Dictionarry-Hub/profilarr"
+  },
+  {
+    "repo": "DouyinFE/semi-design",
+    "url": "https://github.com/DouyinFE/semi-design"
+  },
+  {
+    "repo": "Expensify/react-native-live-markdown",
+    "url": "https://github.com/Expensify/react-native-live-markdown"
+  },
+  {
+    "repo": "ExperienceLovelace/ha-floorplan",
+    "url": "https://github.com/ExperienceLovelace/ha-floorplan"
+  },
+  {
+    "repo": "FlowiseAI/Flowise",
+    "url": "https://github.com/FlowiseAI/Flowise"
+  },
+  {
+    "repo": "FormidableLabs/spectacle",
+    "url": "https://github.com/FormidableLabs/spectacle"
+  },
+  {
+    "repo": "ForumMagnum/ForumMagnum",
+    "url": "https://github.com/ForumMagnum/ForumMagnum"
+  },
+  {
+    "repo": "FuelLabs/fuels-wallet",
+    "url": "https://github.com/FuelLabs/fuels-wallet"
+  },
+  {
+    "repo": "Gisto/Gisto",
+    "url": "https://github.com/Gisto/Gisto"
+  },
+  {
+    "repo": "GitbookIO/gitbook",
+    "url": "https://github.com/GitbookIO/gitbook"
+  },
+  {
+    "repo": "HemmeligOrg/Hemmelig.app",
+    "url": "https://github.com/HemmeligOrg/Hemmelig.app"
+  },
+  {
+    "repo": "IgniteUI/igniteui-angular",
+    "url": "https://github.com/IgniteUI/igniteui-angular"
+  },
+  {
+    "repo": "JetBrains/kotlin-web-site",
+    "url": "https://github.com/JetBrains/kotlin-web-site"
+  },
+  {
+    "repo": "JsDaddy/ngx-mask",
+    "url": "https://github.com/JsDaddy/ngx-mask"
+  },
+  {
+    "repo": "KittyCAD/modeling-app",
+    "url": "https://github.com/KittyCAD/modeling-app"
+  },
+  {
+    "repo": "LottieFiles/lottie-player",
+    "url": "https://github.com/LottieFiles/lottie-player"
+  },
+  {
+    "repo": "LottieFiles/lottie-react",
+    "url": "https://github.com/LottieFiles/lottie-react"
+  },
+  {
+    "repo": "Mail-0/Zero",
+    "url": "https://github.com/Mail-0/Zero"
+  },
+  {
+    "repo": "MiniMax-AI/OpenRoom",
+    "url": "https://github.com/MiniMax-AI/OpenRoom"
+  },
+  {
+    "repo": "Monogatari/Monogatari",
+    "url": "https://github.com/Monogatari/Monogatari"
+  },
+  {
+    "repo": "MyCryptoHQ/MyCrypto",
+    "url": "https://github.com/MyCryptoHQ/MyCrypto"
+  },
+  {
+    "repo": "OHIF/Viewers",
+    "url": "https://github.com/OHIF/Viewers"
+  },
+  {
+    "repo": "ONEARMY/community-platform",
+    "url": "https://github.com/ONEARMY/community-platform"
+  },
+  {
+    "repo": "Oneirocom/Magick",
+    "url": "https://github.com/Oneirocom/Magick"
+  },
+  {
+    "repo": "OpenRailAssociation/osrd",
+    "url": "https://github.com/OpenRailAssociation/osrd"
+  },
+  {
+    "repo": "PasteBar/PasteBarApp",
+    "url": "https://github.com/PasteBar/PasteBarApp"
+  },
+  {
+    "repo": "Portabase/portabase",
+    "url": "https://github.com/Portabase/portabase"
+  },
+  {
+    "repo": "Prismer-AI/Prismer",
+    "url": "https://github.com/Prismer-AI/Prismer"
+  },
+  {
+    "repo": "RSSNext/Folo",
+    "url": "https://github.com/RSSNext/Folo"
+  },
+  {
+    "repo": "RackulaLives/Rackula",
+    "url": "https://github.com/RackulaLives/Rackula"
+  },
+  {
+    "repo": "Redocly/redoc",
+    "url": "https://github.com/Redocly/redoc"
+  },
+  {
+    "repo": "RevokeCash/revoke.cash",
+    "url": "https://github.com/RevokeCash/revoke.cash"
+  },
+  {
+    "repo": "Saas-Starter-Kit/Saas-Kit-prisma",
+    "url": "https://github.com/Saas-Starter-Kit/Saas-Kit-prisma"
+  },
+  {
+    "repo": "Sharkord/sharkord",
+    "url": "https://github.com/Sharkord/sharkord"
+  },
+  {
+    "repo": "SonicJs-Org/sonicjs",
+    "url": "https://github.com/SonicJs-Org/sonicjs"
+  },
+  {
+    "repo": "Stirling-Tools/Stirling-PDF",
+    "url": "https://github.com/Stirling-Tools/Stirling-PDF"
+  },
+  {
+    "repo": "THU-MAIC/OpenMAIC",
+    "url": "https://github.com/THU-MAIC/OpenMAIC"
+  },
+  {
+    "repo": "TanStack/tanstack.com",
+    "url": "https://github.com/TanStack/tanstack.com"
+  },
+  {
+    "repo": "TanStack/virtual",
+    "url": "https://github.com/TanStack/virtual"
+  },
+  {
+    "repo": "Tencent/tdesign-vue",
+    "url": "https://github.com/Tencent/tdesign-vue"
+  },
+  {
+    "repo": "Teradata/covalent",
+    "url": "https://github.com/Teradata/covalent"
+  },
+  {
+    "repo": "TriliumNext/Trilium",
+    "url": "https://github.com/TriliumNext/Trilium"
+  },
+  {
+    "repo": "UI5/webcomponents",
+    "url": "https://github.com/UI5/webcomponents"
+  },
+  {
+    "repo": "UI5/webcomponents-react",
+    "url": "https://github.com/UI5/webcomponents-react"
+  },
+  {
+    "repo": "UgnisSoftware/react-spreadsheet-import",
+    "url": "https://github.com/UgnisSoftware/react-spreadsheet-import"
+  },
+  {
+    "repo": "Unleash/unleash",
+    "url": "https://github.com/Unleash/unleash"
+  },
+  {
+    "repo": "VOICEVOX/voicevox",
+    "url": "https://github.com/VOICEVOX/voicevox"
+  },
+  {
+    "repo": "ValueCell-ai/ClawX",
+    "url": "https://github.com/ValueCell-ai/ClawX"
+  },
+  {
+    "repo": "ViewTube/viewtube",
+    "url": "https://github.com/ViewTube/viewtube"
+  },
+  {
+    "repo": "WeCodePixels/theia-sticky-sidebar",
+    "url": "https://github.com/WeCodePixels/theia-sticky-sidebar"
+  },
+  {
+    "repo": "WebThingsIO/gateway",
+    "url": "https://github.com/WebThingsIO/gateway"
+  },
+  {
+    "repo": "activist-org/activist",
+    "url": "https://github.com/activist-org/activist"
+  },
+  {
+    "repo": "actualbudget/actual",
+    "url": "https://github.com/actualbudget/actual"
+  },
+  {
+    "repo": "ag-grid/ag-grid",
+    "url": "https://github.com/ag-grid/ag-grid"
+  },
+  {
+    "repo": "algolia/docsearch",
+    "url": "https://github.com/algolia/docsearch"
+  },
+  {
+    "repo": "aliasvault/aliasvault",
+    "url": "https://github.com/aliasvault/aliasvault"
+  },
+  {
+    "repo": "allegro/turnilo",
+    "url": "https://github.com/allegro/turnilo"
+  },
+  {
+    "repo": "altair-graphql/altair",
+    "url": "https://github.com/altair-graphql/altair"
+  },
+  {
+    "repo": "angular-split/angular-split",
+    "url": "https://github.com/angular-split/angular-split"
+  },
+  {
+    "repo": "antfu-collective/vitesse",
+    "url": "https://github.com/antfu-collective/vitesse"
+  },
+  {
+    "repo": "apache/apisix-dashboard",
+    "url": "https://github.com/apache/apisix-dashboard"
+  },
+  {
+    "repo": "apache/superset",
+    "url": "https://github.com/apache/superset"
+  },
+  {
+    "repo": "apitable/apitable",
+    "url": "https://github.com/apitable/apitable"
+  },
+  {
+    "repo": "appsmithorg/appsmith",
+    "url": "https://github.com/appsmithorg/appsmith"
+  },
+  {
+    "repo": "archestra-ai/archestra",
+    "url": "https://github.com/archestra-ai/archestra"
+  },
+  {
+    "repo": "ariakit/ariakit",
+    "url": "https://github.com/ariakit/ariakit"
+  },
+  {
+    "repo": "aws-samples/aws-saas-factory-ref-solution-serverless-saas",
+    "url": "https://github.com/aws-samples/aws-saas-factory-ref-solution-serverless-saas"
+  },
+  {
+    "repo": "ballerine-io/ballerine",
+    "url": "https://github.com/ballerine-io/ballerine"
+  },
+  {
+    "repo": "bangle-io/bangle-io",
+    "url": "https://github.com/bangle-io/bangle-io"
+  },
+  {
+    "repo": "bbc/simorgh",
+    "url": "https://github.com/bbc/simorgh"
+  },
+  {
+    "repo": "bemusic/bemuse",
+    "url": "https://github.com/bemusic/bemuse"
+  },
+  {
+    "repo": "bestofjs/bestofjs",
+    "url": "https://github.com/bestofjs/bestofjs"
+  },
+  {
+    "repo": "bluesky-social/ozone",
+    "url": "https://github.com/bluesky-social/ozone"
+  },
+  {
+    "repo": "boxyhq/saas-starter-kit",
+    "url": "https://github.com/boxyhq/saas-starter-kit"
+  },
+  {
+    "repo": "brocoders/extensive-react-boilerplate",
+    "url": "https://github.com/brocoders/extensive-react-boilerplate"
+  },
+  {
+    "repo": "bugbakery/audapolis",
+    "url": "https://github.com/bugbakery/audapolis"
+  },
+  {
+    "repo": "bytedance/flowgram.ai",
+    "url": "https://github.com/bytedance/flowgram.ai"
+  },
+  {
+    "repo": "cam-inc/viron",
+    "url": "https://github.com/cam-inc/viron"
+  },
+  {
+    "repo": "campsite/campsite",
+    "url": "https://github.com/campsite/campsite"
+  },
+  {
+    "repo": "canvg/canvg",
+    "url": "https://github.com/canvg/canvg"
+  },
+  {
+    "repo": "caplin/FlexLayout",
+    "url": "https://github.com/caplin/FlexLayout"
+  },
+  {
+    "repo": "carbon-design-system/carbon-components-svelte",
+    "url": "https://github.com/carbon-design-system/carbon-components-svelte"
+  },
+  {
+    "repo": "chakra-ui/zag",
+    "url": "https://github.com/chakra-ui/zag"
+  },
+  {
+    "repo": "chaskiq/chaskiq",
+    "url": "https://github.com/chaskiq/chaskiq"
+  },
+  {
+    "repo": "civitai/civitai",
+    "url": "https://github.com/civitai/civitai"
+  },
+  {
+    "repo": "cloud-carbon-footprint/cloud-carbon-footprint",
+    "url": "https://github.com/cloud-carbon-footprint/cloud-carbon-footprint"
+  },
+  {
+    "repo": "cloudflare/meet",
+    "url": "https://github.com/cloudflare/meet"
+  },
+  {
+    "repo": "cloudtogo/pageplug",
+    "url": "https://github.com/cloudtogo/pageplug"
+  },
+  {
+    "repo": "codex-team/editor.js",
+    "url": "https://github.com/codex-team/editor.js"
+  },
+  {
+    "repo": "compiler-explorer/compiler-explorer",
+    "url": "https://github.com/compiler-explorer/compiler-explorer"
+  },
+  {
+    "repo": "coollabsio/jean",
+    "url": "https://github.com/coollabsio/jean"
+  },
+  {
+    "repo": "creativetimofficial/ui",
+    "url": "https://github.com/creativetimofficial/ui"
+  },
+  {
+    "repo": "cypress-io/cypress-documentation",
+    "url": "https://github.com/cypress-io/cypress-documentation"
+  },
+  {
+    "repo": "cypress-io/cypress-realworld-app",
+    "url": "https://github.com/cypress-io/cypress-realworld-app"
+  },
+  {
+    "repo": "dailydotdev/apps",
+    "url": "https://github.com/dailydotdev/apps"
+  },
+  {
+    "repo": "databuddy-analytics/Databuddy",
+    "url": "https://github.com/databuddy-analytics/Databuddy"
+  },
+  {
+    "repo": "datopian/portaljs",
+    "url": "https://github.com/datopian/portaljs"
+  },
+  {
+    "repo": "debridmediamanager/debrid-media-manager",
+    "url": "https://github.com/debridmediamanager/debrid-media-manager"
+  },
+  {
+    "repo": "deltachat/deltachat-desktop",
+    "url": "https://github.com/deltachat/deltachat-desktop"
+  },
+  {
+    "repo": "dflex-js/dflex",
+    "url": "https://github.com/dflex-js/dflex"
+  },
+  {
+    "repo": "different-ai/openwork",
+    "url": "https://github.com/different-ai/openwork"
+  },
+  {
+    "repo": "digital-go-jp/design-system-example-components-react",
+    "url": "https://github.com/digital-go-jp/design-system-example-components-react"
+  },
+  {
+    "repo": "dip/cmdk",
+    "url": "https://github.com/dip/cmdk"
+  },
+  {
+    "repo": "documenso/documenso",
+    "url": "https://github.com/documenso/documenso"
+  },
+  {
+    "repo": "dotnetfactory/fluid-calendar",
+    "url": "https://github.com/dotnetfactory/fluid-calendar"
+  },
+  {
+    "repo": "dream-num/univer",
+    "url": "https://github.com/dream-num/univer"
+  },
+  {
+    "repo": "dubinc/dub",
+    "url": "https://github.com/dubinc/dub"
+  },
+  {
+    "repo": "dyad-sh/dyad",
+    "url": "https://github.com/dyad-sh/dyad"
+  },
+  {
+    "repo": "dyrector-io/dyrectorio",
+    "url": "https://github.com/dyrector-io/dyrectorio"
+  },
+  {
+    "repo": "ecronix/react-most-wanted",
+    "url": "https://github.com/ecronix/react-most-wanted"
+  },
+  {
+    "repo": "eigenpal/docx-editor",
+    "url": "https://github.com/eigenpal/docx-editor"
+  },
+  {
+    "repo": "element-hq/element-call",
+    "url": "https://github.com/element-hq/element-call"
+  },
+  {
+    "repo": "element-hq/element-web",
+    "url": "https://github.com/element-hq/element-web"
+  },
+  {
+    "repo": "element-hq/hydrogen-web",
+    "url": "https://github.com/element-hq/hydrogen-web"
+  },
+  {
+    "repo": "elizaOS/eliza",
+    "url": "https://github.com/elizaOS/eliza"
+  },
+  {
+    "repo": "epicweb-dev/epic-stack",
+    "url": "https://github.com/epicweb-dev/epic-stack"
+  },
+  {
+    "repo": "epicweb-dev/full-stack-foundations",
+    "url": "https://github.com/epicweb-dev/full-stack-foundations"
+  },
+  {
+    "repo": "epicweb-dev/react-performance",
+    "url": "https://github.com/epicweb-dev/react-performance"
+  },
+  {
+    "repo": "ethereum-boilerplate/ethereum-boilerplate",
+    "url": "https://github.com/ethereum-boilerplate/ethereum-boilerplate"
+  },
+  {
+    "repo": "f5/unovis",
+    "url": "https://github.com/f5/unovis"
+  },
+  {
+    "repo": "facebook/lexical",
+    "url": "https://github.com/facebook/lexical"
+  },
+  {
+    "repo": "fastapi/full-stack-fastapi-template",
+    "url": "https://github.com/fastapi/full-stack-fastapi-template"
+  },
+  {
+    "repo": "floating-ui/floating-ui",
+    "url": "https://github.com/floating-ui/floating-ui"
+  },
+  {
+    "repo": "flydelabs/flyde",
+    "url": "https://github.com/flydelabs/flyde"
+  },
+  {
+    "repo": "formkit/auto-animate",
+    "url": "https://github.com/formkit/auto-animate"
+  },
+  {
+    "repo": "formkit/formkit",
+    "url": "https://github.com/formkit/formkit"
+  },
+  {
+    "repo": "freeCodeCamp/freeCodeCamp",
+    "url": "https://github.com/freeCodeCamp/freeCodeCamp"
+  },
+  {
+    "repo": "getpaseo/paseo",
+    "url": "https://github.com/getpaseo/paseo"
+  },
+  {
+    "repo": "getsentry/spotlight",
+    "url": "https://github.com/getsentry/spotlight"
+  },
+  {
+    "repo": "giselles-ai/giselle",
+    "url": "https://github.com/giselles-ai/giselle"
+  },
+  {
+    "repo": "git-truck/git-truck",
+    "url": "https://github.com/git-truck/git-truck"
+  },
+  {
+    "repo": "google/playground-elements",
+    "url": "https://github.com/google/playground-elements"
+  },
+  {
+    "repo": "googlemaps/js-samples",
+    "url": "https://github.com/googlemaps/js-samples"
+  },
+  {
+    "repo": "graphile/starter",
+    "url": "https://github.com/graphile/starter"
+  },
+  {
+    "repo": "graphql/graphiql",
+    "url": "https://github.com/graphql/graphiql"
+  },
+  {
+    "repo": "graphql/graphql.github.io",
+    "url": "https://github.com/graphql/graphql.github.io"
+  },
+  {
+    "repo": "grid-js/gridjs",
+    "url": "https://github.com/grid-js/gridjs"
+  },
+  {
+    "repo": "gridaco/grida",
+    "url": "https://github.com/gridaco/grida"
+  },
+  {
+    "repo": "gridstack/gridstack.js",
+    "url": "https://github.com/gridstack/gridstack.js"
+  },
+  {
+    "repo": "growilabs/growi",
+    "url": "https://github.com/growilabs/growi"
+  },
+  {
+    "repo": "guildxyz/guild.xyz",
+    "url": "https://github.com/guildxyz/guild.xyz"
+  },
+  {
+    "repo": "hackerai-tech/hackerai",
+    "url": "https://github.com/hackerai-tech/hackerai"
+  },
+  {
+    "repo": "hello-pangea/dnd",
+    "url": "https://github.com/hello-pangea/dnd"
+  },
+  {
+    "repo": "heylinda/heylinda-app",
+    "url": "https://github.com/heylinda/heylinda-app"
+  },
+  {
+    "repo": "highlight/highlight",
+    "url": "https://github.com/highlight/highlight"
+  },
+  {
+    "repo": "homarr-labs/homarr",
+    "url": "https://github.com/homarr-labs/homarr"
+  },
+  {
+    "repo": "illacloud/illa-builder",
+    "url": "https://github.com/illacloud/illa-builder"
+  },
+  {
+    "repo": "immich-app/immich",
+    "url": "https://github.com/immich-app/immich"
+  },
+  {
+    "repo": "influxdata/chronograf",
+    "url": "https://github.com/influxdata/chronograf"
+  },
+  {
+    "repo": "invoicerr-app/invoicerr",
+    "url": "https://github.com/invoicerr-app/invoicerr"
+  },
+  {
+    "repo": "ionic-team/ionic-framework",
+    "url": "https://github.com/ionic-team/ionic-framework"
+  },
+  {
+    "repo": "ionic-team/ionicons",
+    "url": "https://github.com/ionic-team/ionicons"
+  },
+  {
+    "repo": "jetkvm/kvm",
+    "url": "https://github.com/jetkvm/kvm"
+  },
+  {
+    "repo": "jhipster/jhipster-sample-app",
+    "url": "https://github.com/jhipster/jhipster-sample-app"
+  },
+  {
+    "repo": "jitsucom/jitsu",
+    "url": "https://github.com/jitsucom/jitsu"
+  },
+  {
+    "repo": "jsGanttImproved/jsgantt-improved",
+    "url": "https://github.com/jsGanttImproved/jsgantt-improved"
+  },
+  {
+    "repo": "jscoq/jscoq",
+    "url": "https://github.com/jscoq/jscoq"
+  },
+  {
+    "repo": "jsonwebtoken/jsonwebtoken.github.io",
+    "url": "https://github.com/jsonwebtoken/jsonwebtoken.github.io"
+  },
+  {
+    "repo": "jsxstyle/jsxstyle",
+    "url": "https://github.com/jsxstyle/jsxstyle"
+  },
+  {
+    "repo": "jupyter/nbdime",
+    "url": "https://github.com/jupyter/nbdime"
+  },
+  {
+    "repo": "jupyterlab/jupyterlab",
+    "url": "https://github.com/jupyterlab/jupyterlab"
+  },
+  {
+    "repo": "jupyterlab/lumino",
+    "url": "https://github.com/jupyterlab/lumino"
+  },
+  {
+    "repo": "jupyterlite/jupyterlite",
+    "url": "https://github.com/jupyterlite/jupyterlite"
+  },
+  {
+    "repo": "kawalcovid19/wargabantuwarga.com",
+    "url": "https://github.com/kawalcovid19/wargabantuwarga.com"
+  },
+  {
+    "repo": "keystonejs/keystone",
+    "url": "https://github.com/keystonejs/keystone"
+  },
+  {
+    "repo": "kite-org/kite",
+    "url": "https://github.com/kite-org/kite"
+  },
+  {
+    "repo": "kiwicom/orbit",
+    "url": "https://github.com/kiwicom/orbit"
+  },
+  {
+    "repo": "komodorio/helm-dashboard",
+    "url": "https://github.com/komodorio/helm-dashboard"
+  },
+  {
+    "repo": "kubernetes-sigs/headlamp",
+    "url": "https://github.com/kubernetes-sigs/headlamp"
+  },
+  {
+    "repo": "kufu/smarthr-ui",
+    "url": "https://github.com/kufu/smarthr-ui"
+  },
+  {
+    "repo": "langfuse/langfuse",
+    "url": "https://github.com/langfuse/langfuse"
+  },
+  {
+    "repo": "langwatch/langwatch",
+    "url": "https://github.com/langwatch/langwatch"
+  },
+  {
+    "repo": "laststance/react-typescript-todomvc-2022",
+    "url": "https://github.com/laststance/react-typescript-todomvc-2022"
+  },
+  {
+    "repo": "laudspeaker/laudspeaker",
+    "url": "https://github.com/laudspeaker/laudspeaker"
+  },
+  {
+    "repo": "letterpad/letterpad",
+    "url": "https://github.com/letterpad/letterpad"
+  },
+  {
+    "repo": "liam-hq/liam",
+    "url": "https://github.com/liam-hq/liam"
+  },
+  {
+    "repo": "likec4/likec4",
+    "url": "https://github.com/likec4/likec4"
+  },
+  {
+    "repo": "linode/manager",
+    "url": "https://github.com/linode/manager"
+  },
+  {
+    "repo": "liqvidjs/liqvid",
+    "url": "https://github.com/liqvidjs/liqvid"
+  },
+  {
+    "repo": "live-codes/livecodes",
+    "url": "https://github.com/live-codes/livecodes"
+  },
+  {
+    "repo": "logchimp/logchimp",
+    "url": "https://github.com/logchimp/logchimp"
+  },
+  {
+    "repo": "lunasec-io/lunasec",
+    "url": "https://github.com/lunasec-io/lunasec"
+  },
+  {
+    "repo": "maeil-mail/maeil-mail-fe",
+    "url": "https://github.com/maeil-mail/maeil-mail-fe"
+  },
+  {
+    "repo": "manaflow-ai/manaflow",
+    "url": "https://github.com/manaflow-ai/manaflow"
+  },
+  {
+    "repo": "maplibre/maputnik",
+    "url": "https://github.com/maplibre/maputnik"
+  },
+  {
+    "repo": "marmelab/react-admin",
+    "url": "https://github.com/marmelab/react-admin"
+  },
+  {
+    "repo": "mattermost-community/focalboard",
+    "url": "https://github.com/mattermost-community/focalboard"
+  },
+  {
+    "repo": "mattermost/mattermost",
+    "url": "https://github.com/mattermost/mattermost"
+  },
+  {
+    "repo": "medplum/medplum",
+    "url": "https://github.com/medplum/medplum"
+  },
+  {
+    "repo": "melt-ui/melt-ui",
+    "url": "https://github.com/melt-ui/melt-ui"
+  },
+  {
+    "repo": "mempool/mempool",
+    "url": "https://github.com/mempool/mempool"
+  },
+  {
+    "repo": "mermaid-js/mermaid",
+    "url": "https://github.com/mermaid-js/mermaid"
+  },
+  {
+    "repo": "meshtastic/meshtastic",
+    "url": "https://github.com/meshtastic/meshtastic"
+  },
+  {
+    "repo": "microsoft/fast",
+    "url": "https://github.com/microsoft/fast"
+  },
+  {
+    "repo": "microsoft/fluentui",
+    "url": "https://github.com/microsoft/fluentui"
+  },
+  {
+    "repo": "microsoft/opensource.microsoft.com",
+    "url": "https://github.com/microsoft/opensource.microsoft.com"
+  },
+  {
+    "repo": "microsoft/responsible-ai-toolbox",
+    "url": "https://github.com/microsoft/responsible-ai-toolbox"
+  },
+  {
+    "repo": "midas-research/audino",
+    "url": "https://github.com/midas-research/audino"
+  },
+  {
+    "repo": "mirrorz-org/mirrorz",
+    "url": "https://github.com/mirrorz-org/mirrorz"
+  },
+  {
+    "repo": "misskey-dev/misskey",
+    "url": "https://github.com/misskey-dev/misskey"
+  },
+  {
+    "repo": "motiondivision/motion-vue",
+    "url": "https://github.com/motiondivision/motion-vue"
+  },
+  {
+    "repo": "mozilla/fxa",
+    "url": "https://github.com/mozilla/fxa"
+  },
+  {
+    "repo": "msgbyte/tailchat",
+    "url": "https://github.com/msgbyte/tailchat"
+  },
+  {
+    "repo": "multica-ai/multica",
+    "url": "https://github.com/multica-ai/multica"
+  },
+  {
+    "repo": "naver/billboard.js",
+    "url": "https://github.com/naver/billboard.js"
+  },
+  {
+    "repo": "neo4j-labs/neodash",
+    "url": "https://github.com/neo4j-labs/neodash"
+  },
+  {
+    "repo": "neo4j/neo4j-browser",
+    "url": "https://github.com/neo4j/neo4j-browser"
+  },
+  {
+    "repo": "netbirdio/dashboard",
+    "url": "https://github.com/netbirdio/dashboard"
+  },
+  {
+    "repo": "nhn/tui.calendar",
+    "url": "https://github.com/nhn/tui.calendar"
+  },
+  {
+    "repo": "nhn/tui.grid",
+    "url": "https://github.com/nhn/tui.grid"
+  },
+  {
+    "repo": "nodejs/nodejs.org",
+    "url": "https://github.com/nodejs/nodejs.org"
+  },
+  {
+    "repo": "nohello-net/site",
+    "url": "https://github.com/nohello-net/site"
+  },
+  {
+    "repo": "nomic-ai/deepscatter",
+    "url": "https://github.com/nomic-ai/deepscatter"
+  },
+  {
+    "repo": "npmx-dev/npmx.dev",
+    "url": "https://github.com/npmx-dev/npmx.dev"
+  },
+  {
+    "repo": "nrwl/nx-console",
+    "url": "https://github.com/nrwl/nx-console"
+  },
+  {
+    "repo": "nrwl/nx-examples",
+    "url": "https://github.com/nrwl/nx-examples"
+  },
+  {
+    "repo": "nteract/semiotic",
+    "url": "https://github.com/nteract/semiotic"
+  },
+  {
+    "repo": "ohcnetwork/care_fe",
+    "url": "https://github.com/ohcnetwork/care_fe"
+  },
+  {
+    "repo": "ontola/atomic-server",
+    "url": "https://github.com/ontola/atomic-server"
+  },
+  {
+    "repo": "open-pencil/open-pencil",
+    "url": "https://github.com/open-pencil/open-pencil"
+  },
+  {
+    "repo": "open-telemetry/opentelemetry-demo",
+    "url": "https://github.com/open-telemetry/opentelemetry-demo"
+  },
+  {
+    "repo": "openclaw/clawhub",
+    "url": "https://github.com/openclaw/clawhub"
+  },
+  {
+    "repo": "opencollective/opencollective-frontend",
+    "url": "https://github.com/opencollective/opencollective-frontend"
+  },
+  {
+    "repo": "openobserve/openobserve",
+    "url": "https://github.com/openobserve/openobserve"
+  },
+  {
+    "repo": "openplayerjs/openplayerjs",
+    "url": "https://github.com/openplayerjs/openplayerjs"
+  },
+  {
+    "repo": "openreplay/openreplay",
+    "url": "https://github.com/openreplay/openreplay"
+  },
+  {
+    "repo": "opensearch-project/OpenSearch-Dashboards",
+    "url": "https://github.com/opensearch-project/OpenSearch-Dashboards"
+  },
+  {
+    "repo": "opentiny/tiny-editor",
+    "url": "https://github.com/opentiny/tiny-editor"
+  },
+  {
+    "repo": "otterscan/otterscan",
+    "url": "https://github.com/otterscan/otterscan"
+  },
+  {
+    "repo": "panaverse/learn-nextjs",
+    "url": "https://github.com/panaverse/learn-nextjs"
+  },
+  {
+    "repo": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip"
+  },
+  {
+    "repo": "patternfly/patternfly-react",
+    "url": "https://github.com/patternfly/patternfly-react"
+  },
+  {
+    "repo": "payloadcms/payload",
+    "url": "https://github.com/payloadcms/payload"
+  },
+  {
+    "repo": "pierrecomputer/pierre",
+    "url": "https://github.com/pierrecomputer/pierre"
+  },
+  {
+    "repo": "pingcap/autoflow",
+    "url": "https://github.com/pingcap/autoflow"
+  },
+  {
+    "repo": "pinterest/gestalt",
+    "url": "https://github.com/pinterest/gestalt"
+  },
+  {
+    "repo": "plait-board/drawnix",
+    "url": "https://github.com/plait-board/drawnix"
+  },
+  {
+    "repo": "plasmicapp/plasmic",
+    "url": "https://github.com/plasmicapp/plasmic"
+  },
+  {
+    "repo": "playcanvas/editor",
+    "url": "https://github.com/playcanvas/editor"
+  },
+  {
+    "repo": "porsche-design-system/porsche-design-system",
+    "url": "https://github.com/porsche-design-system/porsche-design-system"
+  },
+  {
+    "repo": "premieroctet/next-admin",
+    "url": "https://github.com/premieroctet/next-admin"
+  },
+  {
+    "repo": "pretzelai/pretzelai",
+    "url": "https://github.com/pretzelai/pretzelai"
+  },
+  {
+    "repo": "primer/react",
+    "url": "https://github.com/primer/react"
+  },
+  {
+    "repo": "prometheus/promlens",
+    "url": "https://github.com/prometheus/promlens"
+  },
+  {
+    "repo": "pwa-builder/PWABuilder",
+    "url": "https://github.com/pwa-builder/PWABuilder"
+  },
+  {
+    "repo": "quoroom-ai/room",
+    "url": "https://github.com/quoroom-ai/room"
+  },
+  {
+    "repo": "quran/quran.com-frontend-next",
+    "url": "https://github.com/quran/quran.com-frontend-next"
+  },
+  {
+    "repo": "qwikifiers/qwik-ui",
+    "url": "https://github.com/qwikifiers/qwik-ui"
+  },
+  {
+    "repo": "radishes-music/radishes",
+    "url": "https://github.com/radishes-music/radishes"
+  },
+  {
+    "repo": "radix-ui/primitives",
+    "url": "https://github.com/radix-ui/primitives"
+  },
+  {
+    "repo": "react-navigation/react-navigation",
+    "url": "https://github.com/react-navigation/react-navigation"
+  },
+  {
+    "repo": "redpanda-data/console",
+    "url": "https://github.com/redpanda-data/console"
+  },
+  {
+    "repo": "refactoringhq/tolaria",
+    "url": "https://github.com/refactoringhq/tolaria"
+  },
+  {
+    "repo": "refly-ai/refly",
+    "url": "https://github.com/refly-ai/refly"
+  },
+  {
+    "repo": "remix-run/examples",
+    "url": "https://github.com/remix-run/examples"
+  },
+  {
+    "repo": "replayio/devtools",
+    "url": "https://github.com/replayio/devtools"
+  },
+  {
+    "repo": "rolling-scopes/rsschool-app",
+    "url": "https://github.com/rolling-scopes/rsschool-app"
+  },
+  {
+    "repo": "runtipi/runtipi",
+    "url": "https://github.com/runtipi/runtipi"
+  },
+  {
+    "repo": "saas-js/saas-ui",
+    "url": "https://github.com/saas-js/saas-ui"
+  },
+  {
+    "repo": "saasykits/nextjs-sessionauth-template",
+    "url": "https://github.com/saasykits/nextjs-sessionauth-template"
+  },
+  {
+    "repo": "sanity-io/sanity",
+    "url": "https://github.com/sanity-io/sanity"
+  },
+  {
+    "repo": "scalar/scalar",
+    "url": "https://github.com/scalar/scalar"
+  },
+  {
+    "repo": "schedule-x/schedule-x",
+    "url": "https://github.com/schedule-x/schedule-x"
+  },
+  {
+    "repo": "scriptscat/scriptcat",
+    "url": "https://github.com/scriptscat/scriptcat"
+  },
+  {
+    "repo": "scroll-out/scroll-out",
+    "url": "https://github.com/scroll-out/scroll-out"
+  },
+  {
+    "repo": "seek-oss/playroom",
+    "url": "https://github.com/seek-oss/playroom"
+  },
+  {
+    "repo": "seerr-team/seerr",
+    "url": "https://github.com/seerr-team/seerr"
+  },
+  {
+    "repo": "sheinsight/shineout",
+    "url": "https://github.com/sheinsight/shineout"
+  },
+  {
+    "repo": "shortlink-org/shortlink",
+    "url": "https://github.com/shortlink-org/shortlink"
+  },
+  {
+    "repo": "sighupio/permission-manager",
+    "url": "https://github.com/sighupio/permission-manager"
+  },
+  {
+    "repo": "silevis/reactgrid",
+    "url": "https://github.com/silevis/reactgrid"
+  },
+  {
+    "repo": "silverbulletmd/silverbullet",
+    "url": "https://github.com/silverbulletmd/silverbullet"
+  },
+  {
+    "repo": "skillrecordings/egghead-next",
+    "url": "https://github.com/skillrecordings/egghead-next"
+  },
+  {
+    "repo": "skyhook-io/radar",
+    "url": "https://github.com/skyhook-io/radar"
+  },
+  {
+    "repo": "slab/quill",
+    "url": "https://github.com/slab/quill"
+  },
+  {
+    "repo": "slidevjs/slidev",
+    "url": "https://github.com/slidevjs/slidev"
+  },
+  {
+    "repo": "solana-foundation/explorer",
+    "url": "https://github.com/solana-foundation/explorer"
+  },
+  {
+    "repo": "spartan-ng/spartan",
+    "url": "https://github.com/spartan-ng/spartan"
+  },
+  {
+    "repo": "springload/react-accessible-accordion",
+    "url": "https://github.com/springload/react-accessible-accordion"
+  },
+  {
+    "repo": "stoatchat/for-web",
+    "url": "https://github.com/stoatchat/for-web"
+  },
+  {
+    "repo": "stoplightio/elements",
+    "url": "https://github.com/stoplightio/elements"
+  },
+  {
+    "repo": "stravu/crystal",
+    "url": "https://github.com/stravu/crystal"
+  },
+  {
+    "repo": "streetmix/streetmix",
+    "url": "https://github.com/streetmix/streetmix"
+  },
+  {
+    "repo": "super-productivity/super-productivity",
+    "url": "https://github.com/super-productivity/super-productivity"
+  },
+  {
+    "repo": "surveyjs/survey-creator",
+    "url": "https://github.com/surveyjs/survey-creator"
+  },
+  {
+    "repo": "surveyjs/survey-library",
+    "url": "https://github.com/surveyjs/survey-library"
+  },
+  {
+    "repo": "sushi-labs/sushiswap",
+    "url": "https://github.com/sushi-labs/sushiswap"
+  },
+  {
+    "repo": "svelte-inview/svelte-inview",
+    "url": "https://github.com/svelte-inview/svelte-inview"
+  },
+  {
+    "repo": "swaponline/MultiCurrencyWallet",
+    "url": "https://github.com/swaponline/MultiCurrencyWallet"
+  },
+  {
+    "repo": "swimlane/ngx-dnd",
+    "url": "https://github.com/swimlane/ngx-dnd"
+  },
+  {
+    "repo": "swimlane/ngx-ui",
+    "url": "https://github.com/swimlane/ngx-ui"
+  },
+  {
+    "repo": "swup/swup",
+    "url": "https://github.com/swup/swup"
+  },
+  {
+    "repo": "synyi/poplar",
+    "url": "https://github.com/synyi/poplar"
+  },
+  {
+    "repo": "tagspaces/tagspaces",
+    "url": "https://github.com/tagspaces/tagspaces"
+  },
+  {
+    "repo": "taiga-family/maskito",
+    "url": "https://github.com/taiga-family/maskito"
+  },
+  {
+    "repo": "team-mirai/marumie",
+    "url": "https://github.com/team-mirai/marumie"
+  },
+  {
+    "repo": "theatre-js/theatre",
+    "url": "https://github.com/theatre-js/theatre"
+  },
+  {
+    "repo": "theodo/falco",
+    "url": "https://github.com/theodo/falco"
+  },
+  {
+    "repo": "thunderbird/thunderbolt",
+    "url": "https://github.com/thunderbird/thunderbolt"
+  },
+  {
+    "repo": "tinacms/tinacms",
+    "url": "https://github.com/tinacms/tinacms"
+  },
+  {
+    "repo": "tldraw/tldraw",
+    "url": "https://github.com/tldraw/tldraw"
+  },
+  {
+    "repo": "tokens-studio/figma-plugin",
+    "url": "https://github.com/tokens-studio/figma-plugin"
+  },
+  {
+    "repo": "tone-row/flowchart-fun",
+    "url": "https://github.com/tone-row/flowchart-fun"
+  },
+  {
+    "repo": "toptal/keycodes",
+    "url": "https://github.com/toptal/keycodes"
+  },
+  {
+    "repo": "tractordev/apptron",
+    "url": "https://github.com/tractordev/apptron"
+  },
+  {
+    "repo": "tradingview/lightweight-charts",
+    "url": "https://github.com/tradingview/lightweight-charts"
+  },
+  {
+    "repo": "tremorlabs/tremor",
+    "url": "https://github.com/tremorlabs/tremor"
+  },
+  {
+    "repo": "trpc/examples-next-prisma-starter",
+    "url": "https://github.com/trpc/examples-next-prisma-starter"
+  },
+  {
+    "repo": "trycompai/comp",
+    "url": "https://github.com/trycompai/comp"
+  },
+  {
+    "repo": "twentyhq/twenty",
+    "url": "https://github.com/twentyhq/twenty"
+  },
+  {
+    "repo": "twilio/twilio-video-app-react",
+    "url": "https://github.com/twilio/twilio-video-app-react"
+  },
+  {
+    "repo": "typehero/typehero",
+    "url": "https://github.com/typehero/typehero"
+  },
+  {
+    "repo": "uber/baseweb",
+    "url": "https://github.com/uber/baseweb"
+  },
+  {
+    "repo": "uber/react-view",
+    "url": "https://github.com/uber/react-view"
+  },
+  {
+    "repo": "ueberdosis/tiptap",
+    "url": "https://github.com/ueberdosis/tiptap"
+  },
+  {
+    "repo": "umami-software/umami",
+    "url": "https://github.com/umami-software/umami"
+  },
+  {
+    "repo": "usablica/intro.js",
+    "url": "https://github.com/usablica/intro.js"
+  },
+  {
+    "repo": "valor-software/ng2-charts",
+    "url": "https://github.com/valor-software/ng2-charts"
+  },
+  {
+    "repo": "valor-software/ngx-bootstrap",
+    "url": "https://github.com/valor-software/ngx-bootstrap"
+  },
+  {
+    "repo": "vercel-labs/visual-json",
+    "url": "https://github.com/vercel-labs/visual-json"
+  },
+  {
+    "repo": "vercel-labs/workflow-builder-template",
+    "url": "https://github.com/vercel-labs/workflow-builder-template"
+  },
+  {
+    "repo": "vercel-labs/wterm",
+    "url": "https://github.com/vercel-labs/wterm"
+  },
+  {
+    "repo": "vercel/chatbot",
+    "url": "https://github.com/vercel/chatbot"
+  },
+  {
+    "repo": "vercel/examples",
+    "url": "https://github.com/vercel/examples"
+  },
+  {
+    "repo": "videojs/v10",
+    "url": "https://github.com/videojs/v10"
+  },
+  {
+    "repo": "vm0-ai/vm0",
+    "url": "https://github.com/vm0-ai/vm0"
+  },
+  {
+    "repo": "vue-final/vue-final-modal",
+    "url": "https://github.com/vue-final/vue-final-modal"
+  },
+  {
+    "repo": "vuestorefront/storefront-ui",
+    "url": "https://github.com/vuestorefront/storefront-ui"
+  },
+  {
+    "repo": "vuetifyjs/vuetify",
+    "url": "https://github.com/vuetifyjs/vuetify"
+  },
+  {
+    "repo": "wandb/openui",
+    "url": "https://github.com/wandb/openui"
+  },
+  {
+    "repo": "wangeditor-next/wangEditor-next",
+    "url": "https://github.com/wangeditor-next/wangEditor-next"
+  },
+  {
+    "repo": "wangeditor-team/wangEditor",
+    "url": "https://github.com/wangeditor-team/wangEditor"
+  },
+  {
+    "repo": "webiny/webiny-js",
+    "url": "https://github.com/webiny/webiny-js"
+  },
+  {
+    "repo": "webrecorder/replayweb.page",
+    "url": "https://github.com/webrecorder/replayweb.page"
+  },
+  {
+    "repo": "withastro/starlight",
+    "url": "https://github.com/withastro/starlight"
+  },
+  {
+    "repo": "withastro/storefront",
+    "url": "https://github.com/withastro/storefront"
+  },
+  {
+    "repo": "xyflow/xyflow",
+    "url": "https://github.com/xyflow/xyflow"
+  },
+  {
+    "repo": "yoopta-editor/Yoopta-Editor",
+    "url": "https://github.com/yoopta-editor/Yoopta-Editor"
+  },
+  {
+    "repo": "zard-ui/zardui",
+    "url": "https://github.com/zard-ui/zardui"
+  },
+  {
+    "repo": "zuplo/zudoku",
+    "url": "https://github.com/zuplo/zudoku"
+  }
+]

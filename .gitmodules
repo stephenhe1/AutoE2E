@@ -1,0 +1,15 @@
+# The DimeShift application source, pinned to the revision the benchmark's Docker image was
+# built from. See benchmark/dimeshift/README.md for why the pin matters.
+#
+# This mapping was MISSING until 2026-09-04: benchmark/dimeshift/dimeshift had been committed as
+# a gitlink (mode 160000, commit 440898e) since e5ef8d2 "added initial version of autoe2e and
+# e2ebench", but with no .gitmodules entry. Git therefore had a submodule pointer it could not
+# resolve: `git submodule update` failed with "no submodule mapping found", recursive clones
+# produced an empty directory, and the recorded revision was effectively unreachable.
+#
+# The pointer itself was never wrong -- 440898e8e48b9a85f4d3c7dfa374e4abd7e27423 is exactly
+# refs/heads/master of the upstream below (verified 2026-09-04). Only the mapping was absent, so
+# this is a repair, not a re-pin: the commit is unchanged.
+[submodule "benchmark/dimeshift/dimeshift"]
+	path = benchmark/dimeshift/dimeshift
+	url = https://github.com/jeka-kiselyov/dimeshift.git
