@@ -1,4 +1,6 @@
-from typing import Any, Self
+from __future__ import annotations
+
+from typing import Any
 
 from selenium.webdriver.remote.webdriver import WebDriver
 

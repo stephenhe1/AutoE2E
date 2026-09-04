@@ -1,7 +1,7 @@
 {
   "temp_dir": "./tmp",
   "driver": {
-    "base_url": "http://localhost:3334/"
+    "base_url": "http://localhost:3003/en/"
   },
   "lifecycle": {
     "on_visit": [],

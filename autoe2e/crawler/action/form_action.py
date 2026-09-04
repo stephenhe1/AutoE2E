@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
@@ -29,8 +31,10 @@ class FormAction(Action):
     
     
     def execute(self, driver: WebDriver) -> None:
-        if self.params is None:
-            raise ValueError('Parameters are not set for the form action.')
+        if not self.params:
+            from autoe2e.utils import logger
+            logger.warn("No form params available, skipping form action")
+            return
         
         driver.execute_script("arguments[0].scrollIntoView(true);", self.element.get(driver))
         
@@ -49,6 +53,5 @@ class FormAction(Action):
             if pair not in FORBIDDEN_ACTIONS:
                 submit_button.click()
         except Exception as e:
-            print(e)
-            print("waiting for use to perform the form task")
-            input("Press Enter to continue...")
+            from autoe2e.utils import logger
+            logger.warn(f"Form action failed, skipping: {e}")

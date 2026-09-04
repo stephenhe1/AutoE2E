@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from autoe2e.crawler.state.state_graph import StateGraph
 from autoe2e.crawler.state.state import State
 from autoe2e.crawler.action import Action

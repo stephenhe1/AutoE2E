@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import json
 
@@ -84,7 +86,8 @@ def extract_action_functionalities(
         )
     )
 
-    functionalities = json.loads(extract_response_content(res))
+    raw = extract_response_content(res)
+    functionalities = json.loads(raw) if raw else []
 
     functionalities = list(map(lambda x: x['feature'], functionalities))
 
@@ -105,7 +108,8 @@ def extract_action_functionalities_dict(
         )
     )
 
-    functionalities = json.loads(extract_response_content(res))
+    raw = extract_response_content(res)
+    functionalities = json.loads(raw) if raw else []
 
     functionalities = list(map(lambda x: x['feature'], functionalities))
 
@@ -113,28 +117,25 @@ def extract_action_functionalities_dict(
 
 
 def query_similar_functionalities(embedding):
-    query = [
-        {
-            '$vectorSearch': {
-                'index': 'vector_index', 
-                'path': 'embedding', 
-                'queryVector': embedding, 
-                'limit': 50,
-                'numCandidates': 200
-            }
-        },
-        {
-            '$match': {
-                'app': os.getenv("APP_NAME"),
-            }
-        },
-        {
-            '$limit': 5
-        }
-    ]
+    import numpy as np
 
-    similar_funcs = list(func_db.aggregate(query))
-    return similar_funcs
+    all_funcs = list(func_db.find({
+        'app': os.getenv("APP_NAME"),
+        'embedding': {'$exists': True}
+    }))
+
+    if not all_funcs:
+        return []
+
+    query_vec = np.array(embedding)
+    scored = []
+    for doc in all_funcs:
+        doc_vec = np.array(doc['embedding'])
+        cos_sim = np.dot(query_vec, doc_vec) / (np.linalg.norm(query_vec) * np.linalg.norm(doc_vec) + 1e-10)
+        scored.append((cos_sim, doc))
+
+    scored.sort(key=lambda x: x[0], reverse=True)
+    return [doc for _, doc in scored[:5]]
 
 
 def get_exact_match_indices(text, similar_funcs):
@@ -172,8 +173,9 @@ def map_similar_func_to_exact_match(func_info):
             )
         )
         
-        match = json.loads(extract_response_content(res))
-        
+        raw = extract_response_content(res)
+        match = json.loads(raw) if raw else {'match': False}
+
         if 'match_index' in match:
             match['match_index'] = list(set(match['match_index'] + exact_match_indices))
         elif len(exact_match_indices) > 0:
@@ -411,7 +413,8 @@ def mark_final_functionalities(curr_state, curr_action):
         )
     )
 
-    finality = eval(extract_response_content(res))
+    raw = extract_response_content(res)
+    finality = eval(raw) if raw else []
 
     for i in range(len(finality)):
         if finality[i]:
@@ -454,7 +457,8 @@ def mark_final_functionalities_dict(curr_state, curr_action):
         )
     )
 
-    finality = eval(extract_response_content(res))
+    raw = extract_response_content(res)
+    finality = eval(raw) if raw else []
 
     for i in range(len(finality)):
         if finality[i]:
@@ -505,4 +509,8 @@ def create_form_filling_values(action: Action):
         create_simple_user_messages(element_html)
     )
 
-    return json.loads(res)
+    raw = extract_response_content(res) or res
+    try:
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        return {}

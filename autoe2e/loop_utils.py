@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import re
 import random
@@ -199,11 +201,12 @@ def extract_state_action_features(crawl_context: CrawlContext, state: State):
                 state_url=state.url,
                 prev_state_id=state.crawl_path.get_state(-1).get_id(StateIdEvaluator.BY_ACTIONS) if len(state.crawl_path) > 0 else None,
                 action_id=action.get_id(),
+                prev_action_id=state.crawl_path.get_action(-1).get_id() if len(state.crawl_path) > 0 else None,
                 action_test_id=action.element.test_id,
                 action_depth=len(state.crawl_path),
                 action_type="SINGLE"
             )
-    
+
         if len(state.crawl_path) > 0:
             logger.info('Extracting double action scenarios')
             functionalities = extract_action_functionalities(state, action, state.crawl_path.get_action(-1))
@@ -215,6 +218,7 @@ def extract_state_action_features(crawl_context: CrawlContext, state: State):
                     state_url=state.url,
                     prev_state_id=state.crawl_path.get_state(-1).get_id(StateIdEvaluator.BY_ACTIONS) if len(state.crawl_path) > 0 else None,
                     action_id=action.get_id(),
+                    prev_action_id=state.crawl_path.get_action(-1).get_id() if len(state.crawl_path) > 0 else None,
                     action_test_id=action.element.test_id,
                     action_depth=len(state.crawl_path),
                     action_type="DOUBLE"

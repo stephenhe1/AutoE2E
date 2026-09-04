@@ -1,23 +1,25 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.remote.webdriver import WebDriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
 
 from autoe2e.utils import AbstractSingleton
 from autoe2e.crawler.config import Config
 
 
-# TODO: if the connection is closed create a new driver
 class DriverContainer(AbstractSingleton):
     def __init__(self, config: Config):
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-        # driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-        # wait for elements to load on page if necessary
-        # driver.implicitly_wait(10)
+        options = webdriver.ChromeOptions()
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option("detach", True)
+        driver = webdriver.Chrome(options=options)
+        driver.set_page_load_timeout(30)
+        driver.implicitly_wait(5)
         self.driver = driver
-    
-    
+
+
     def get_driver(self) -> WebDriver:
         return self.driver
 

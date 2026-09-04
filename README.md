@@ -4,35 +4,35 @@ Source code and benchmark subjects for "AutoE2E: Feature-Driven End-To-End Test 
 ![AutoE2E Workflow](./workflow.png)
 
 ## Requirements
-Install the required packages using the following command:
+- Python 3.9+
+- Chrome browser (for Selenium WebDriver)
+- MongoDB (local or Atlas)
+- LiteLLM API access (for LLM chat + embeddings)
+
+Install the required packages:
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ## Usage
-Before running the project, you need to set the environment variables in the `.env` file. This includes:
-
-1. `APP_NAME`: The name of the application you want to generate E2E test cases for. This needs to match one of the configs in `./configs` folder.
-2. `ANTHROPIC_API_KEY`: The API key for the Anthropic platform. You can get this by signing up at [Anthropic](https://anthropic.com/).
-3. `ATLAS_URI`: The MongoDB Atlas URI for storing the Action-Feature Database (AFD) and Feature Database (FD).
-
-Then you can run the project using the following command:
+Copy the example env file and fill in your credentials:
 ```bash
-python main.py
+cp .env.example .env
 ```
 
-## LLM Prompts
-The prompts used for different parts of our workflow is available in `./autoe2e/prompts.py` file. We use the following prompt for context extraction:
+Required environment variables:
+1. `APP_NAME`: The name of the application you want to generate E2E test cases for. This needs to match one of the configs in `./configs` folder (e.g. `PETCLINIC`).
+2. `LITELLM_API_KEY`: Your LiteLLM API key.
+3. `LITELLM_BASE_URL`: LiteLLM proxy URL (defaults to `https://ete-litellm.ai-models.vpc-int.res.ibm.com`).
+4. `MONGODB_URI`: MongoDB connection string (defaults to `mongodb://localhost:27017`).
 
-> Given the provided information about a webpage, your task is to provide a brief and abstract description of the webpage's primary purpose or function.
-> Output Guidelines:
-> * Brevity: Keep the description concise (aim for 1-2 sentences).
-> * Abstraction: Avoid specific details or variable names. Use general terms to describe the content and function. (Example: Instead of "a page showing results for searching for a TV," say "a page displaying search results for a product query.")
-> * Focus on Purpose: Prioritize describing the main intent of the page. What is it designed for the user to do or learn?
-> * No Extra Explanations: Just provide the context. Avoid adding commentary or assumptions.
-
-
-and the following for feature extraction:
+Then run the project:
+```bash
+source .venv/bin/activate
+python main.py
+```
 
 ## Reproducibility
 
@@ -156,6 +156,19 @@ of these scripts — they have no reset tooling in this repository.
   database) present only that empty state unless seeded first.
 - **Chrome is not headless** and is created with `detach: True`, so runs open visible windows and
   the browser outlives the process.
+
+## LLM Prompts
+The prompts used for different parts of our workflow is available in `./autoe2e/prompts.py` file. We use the following prompt for context extraction:
+
+> Given the provided information about a webpage, your task is to provide a brief and abstract description of the webpage's primary purpose or function.
+> Output Guidelines:
+> * Brevity: Keep the description concise (aim for 1-2 sentences).
+> * Abstraction: Avoid specific details or variable names. Use general terms to describe the content and function. (Example: Instead of "a page showing results for searching for a TV," say "a page displaying search results for a product query.")
+> * Focus on Purpose: Prioritize describing the main intent of the page. What is it designed for the user to do or learn?
+> * No Extra Explanations: Just provide the context. Avoid adding commentary or assumptions.
+
+
+and the following for feature extraction:
 
 
 > Given a webpage's purpose and content (webpage_context), the outerHTML of an action element (action_element), and optionally the user's last action that led to this state, your task is to infer the most likely functionalities associated with that action element.

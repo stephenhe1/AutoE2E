@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class DriverConfig:
     def __init__(self):
         self.base_url: str | None = None

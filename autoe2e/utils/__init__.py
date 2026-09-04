@@ -60,16 +60,26 @@ def png_to_base64(image_path):
 
 
 def extract_response_content(text):
-    """Extracts content enclosed within a <Response> tag.
+    """Extracts structured content from LLM response.
 
-    Args:
-        text: The string to parse.
-
-    Returns:
-        The content inside the <Response> tag, or None if not found.
+    Tries in order: <Response> tags, ```json code blocks, ``` code blocks,
+    raw JSON array/object.
     """
+    if not text:
+        return None
     match = re.search(r"<Response>(.*?)</Response>", text, re.DOTALL)
-    return match.group(1) if match else None
+    if match:
+        return match.group(1).strip()
+    match = re.search(r"```json\s*(.*?)```", text, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    match = re.search(r"```\s*(.*?)```", text, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    match = re.search(r"(\[.*\]|\{.*\})", text, re.DOTALL)
+    if match:
+        return match.group(1).strip()
+    return None
 
 
 def log_user_messages(user_messages):
