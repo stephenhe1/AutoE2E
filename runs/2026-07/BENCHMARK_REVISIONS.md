@@ -48,8 +48,11 @@ deterministic-reset scripts as `tools/...` paths in "the explorer repo". They ar
 `/Users/stephenhe/Projects/ui-graph-explorer/tools/`**, the repo those notes read as referring to.
 
 They do exist, in a **different** checkout — `/Users/stephenhe/Projects/ui-graph-explorer-integration`
-(remote `git@github.com:stephenhe1/UI-Graph-Explorer.git`, HEAD `ebfd444`), where all three are
-tracked:
+(remote `git@github.com:stephenhe1/UI-Graph-Explorer.git`), where all three are tracked. All three
+have since been **vendored into this repository** under `tools/` with provenance headers; see
+*Vendored reset/seed tools* in the README. The per-file commits below are the authoritative
+reference — that checkout's HEAD moves (it was `ebfd444` when this file was first written and
+`b07e8a84` a few minutes later), so pinning provenance to HEAD would be meaningless:
 
 | script | path | tracked at |
 |---|---|---|
@@ -57,7 +60,9 @@ tracked:
 | `keystone_blog_reset.sh` | `ui-graph-explorer-integration/tools/keystone_blog_reset.sh` | `bb9da86` 2026-08-23 (same commit) |
 | `bangle_seed_state.py` | `ui-graph-explorer-integration/tools/bangle_seed_state.py` | `94e2734` 2026-08-23 *subject: bangle-io deterministic workspace baseline* |
 
-Nothing has been copied — they are recorded here by location only. Treat the harness as **not
-self-contained**: reproducing a reset requires the `ui-graph-explorer-integration` checkout in
-addition to `general-agent-eval`, and `services.json`'s `tools/` references are relative to a repo
-it does not name.
+The two shell reset scripts are now self-contained in `tools/` and run standalone.
+`bangle_seed_state.py` is vendored for provenance but **still is not runnable from this repository**:
+it imports `playwright` and `ui_graph.restoration._IDB_EXPORT_JS`, neither of which is part of
+AutoE2E. Bangle-io's client-state seeding therefore continues to depend on the
+`ui-graph-explorer-integration` checkout. `services.json`'s `tools/` references remain relative to a
+repo it does not name.

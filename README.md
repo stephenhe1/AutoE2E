@@ -96,25 +96,11 @@ references from `action-functionality` into `functionality` stay valid. The scri
 counts and `_id` uniqueness before writing, and **replaces existing rows for the five apps it
 covers**.
 
-### Launching a subject and starting a run
+### Starting a run
 
 A subject must already be serving before AutoE2E starts; `main.py` navigates straight to
-`driver.base_url` and has no service-startup step of its own.
-
-The authoritative per-subject launch commands live in the harness registry
-`general-agent-eval/resources/scripts/services.json` (`run` field, `${PORT}` substituted), with
-`general-agent-eval/resources/scripts/run-with-service.sh` as the wrapper that builds, starts and
-health-gates a service before handing off. As recorded there:
-
-| subject | run from | command | port |
-|---|---|---|---|
-| todomvc | repo root | `npx vite --port 5180 --host 127.0.0.1` | 5180 |
-| keystone-blog | `examples/usecase-blog` | `env PORT=3200 npx keystone dev` | 3200 |
-| epic-stack | repo root | `node index.ts` (needs `NODE_ENV=production`, `MOCKS=true`) | 3000 |
-| cypress-realworld-app | repo root | `yarn start:react -- --port 5182 --host 127.0.0.1` | 5182 |
-| bangle-io | `packages/tooling/browser-entry` | `npx vite --configLoader runner --port 5173 --host 127.0.0.1` | 5173 |
-
-Then point a config at it and run:
+`driver.base_url` and has no service-startup step of its own. Bring the subject up first (see *The
+five-subject harness* below), then:
 
 ```bash
 source .venv/bin/activate
@@ -125,24 +111,175 @@ APP_NAME=TODOMVC python main.py          # or set APP_NAME in .env
 runs until its queue empties, with no built-in cap; `SIGINT`/`SIGTERM` is handled — it finishes the
 current action, saves the state graph to `report/<APP>.json`, and writes final status.
 
-### Required reset / seed scripts (external dependency)
+### The five-subject harness
 
-The five 2026-09 subjects need deterministic state resets between runs. `services.json` refers to
-these as `tools/...` "in the explorer repo", but they are **absent from
-`ui-graph-explorer/tools/`**. They live in a *different* checkout,
-`ui-graph-explorer-integration/tools/` (remote `UI-Graph-Explorer.git`), where all three are
-tracked:
+Everything needed to bring the five 2026-09 subjects up lives in this repository: the reset/seed
+scripts are vendored under `tools/` (see *Vendored reset/seed tools* below), and the launch,
+port, health and env facts are recorded here. The subject checkouts themselves are external —
+they are large git clones and are referenced by revision, not vendored.
 
-| script | purpose | invocation |
+Subject checkouts are rooted at `/Users/stephenhe/Projects/new-benchmark-repos/<subject>`. All five
+revisions below were confirmed against the live checkouts on 2026-09-04.
+
+| subject | revision | port | base URL | AutoE2E config | health timeout | auth |
+|---|---|---:|---|---|---:|---|
+| TodoMVC | `7d727bc458ed` | 5180 | `http://127.0.0.1:5180/` | `TODOMVC` | 30 s | none |
+| Keystone-blog | `a92fd4492135` | 3200 | `http://127.0.0.1:3200/` | `KEYSTONE_BLOG` | 180 s | none |
+| Epic-stack | `faaa21779c66` | 3000 | `http://127.0.0.1:3000/` | `EPIC_STACK` | 120 s | `kody` / `kodylovesyou` |
+| RWA | `6486a7efed0c` | 5182 (+3001 API) | `http://127.0.0.1:5182/` | `CYPRESS_RWA` | 30 s | `Heath93` / `s3cret` |
+| Bangle-io | `09e9b794e71b` | 5173 | `http://127.0.0.1:5173/` | `BANGLE_IO` | 90 s | none |
+
+Launch commands are quoted from the harness registry
+`general-agent-eval/resources/scripts/services.json` (`run` field, `${PORT}` substituted).
+`general-agent-eval/resources/scripts/run-with-service.sh` is the wrapper that builds, starts and
+health-gates a service before handing off. Health check is `GET <base URL>` for every subject.
+
+#### TodoMVC
+
+    cd .../todomvc
+    npx vite --port 5180 --host 127.0.0.1
+
+- **Build:** none. **Required env:** none. **Auth:** none.
+- **Reset:** no server-side state — state is browser `localStorage`. AutoE2E's Chrome is started
+  without `--user-data-dir`, so every run gets a fresh temporary profile and begins empty. There is
+  no reset script and none is needed.
+- **Pitfall:** the registry command has no `--strictPort`, so if 5180 is taken Vite silently binds
+  the next free port. Confirm the listening process's working directory, not just that the port
+  answers.
+
+#### Keystone-blog
+
+    cd .../keystone/examples/usecase-blog
+    env PORT=3200 npx keystone dev
+
+- **Build:** none (pnpm workspace; dependencies installed at the monorepo root).
+- **Required env:** `PORT`, set by the command above. **Auth:** none — this example has no
+  authentication.
+- **Reset:** `bash tools/keystone_blog_reset.sh` (directory overridable via `KEYSTONE_BLOG_DIR`).
+  Restores `keystone-example.pristine.db` over the live database and clears `-shm`/`-wal`.
+- **Pitfalls:** must be launched from the example directory — it resolves its Prisma client through
+  the monorepo's `myprisma` alias, so starting from the repo root fails. First boot migrates and
+  rebuilds the Admin UI, which is why the health timeout is 180 s, the longest of the five. The repo
+  declares `pnpm@11.5.2`; 11.9.0 is what is on PATH here.
+
+#### Epic-stack
+
+    cd .../epic-stack
+    NODE_ENV=production MOCKS=true node index.ts
+
+- **Build:** `npm run build` (already performed on host, along with `prisma migrate deploy` and
+  `prisma generate --sql`).
+- **Required env:** `NODE_ENV=production` **and** `MOCKS=true` — both are required by the registry.
+  The server reads `PORT` from the environment.
+- **Auth:** seeded user `kody` / `kodylovesyou`.
+- **Reset:** `bash tools/epic_stack_reset.sh` (directory overridable via `EPIC_STACK_REPO`).
+  Restores `prisma/pristine.db` over `prisma/data.db` and removes `-shm`/`-wal` plus
+  `other/cache.db`. Note `prisma/pristine.db` is **untracked** in the subject checkout: if it is
+  lost it cannot be restored from that repo.
+- **Pitfalls:** the repo's own scripts wrap `node` in `cross-env`, a local devDependency that is not
+  on PATH for a plain service shell, which is why the command is bare `node index.ts` with the
+  environment set externally. Port 3000 has previously been occupied by a baseline clone of this
+  same app with an identical page title, so confirm the listening process's working directory.
+
+#### RWA (cypress-realworld-app)
+
+    # frontend
+    cd .../cypress-realworld-app && yarn start:react -- --port 5182 --host 127.0.0.1
+    # API sidecar, separate process
+    cd .../cypress-realworld-app && yarn start:api
+
+- **Build:** none (Yarn 1). **Required env:** none.
+- **Auth:** password `s3cret`; the seed database's first user is `Heath93` (the harness resolves the
+  username from the live `data/database.json` at scaffold time, falling back to
+  `Katharina_Bernier`).
+- **Reset:** `cp data/database-seed.json data/database.json`. This is the one subject with no
+  vendored script — the reset is a single file copy, performed by the harness arm drivers.
+  `data/empty-seed.json` also exists; the harness uses `database-seed.json`.
+- **Health:** frontend `GET /` with a 30 s timeout. **The API on 3001 has no health path defined in
+  the registry** — the harness simply sleeps 20 s after launching it. Confirm 3001 answers before
+  relying on it.
+- **Pitfalls:** the registry's `run` starts the **frontend only**; with no API the app renders
+  login/signup against a dead backend and nothing persists. The frontend bakes its API URL in at
+  build time from `.env` *files* and ignores the shell environment, so exporting
+  `VITE_BACKEND_PORT` has no effect and the page keeps calling the committed default of 3001. Two
+  checkouts of this application exist at different revisions — see *July-as-run configs* below.
+
+#### Bangle-io
+
+    cd .../bangle-io/packages/tooling/browser-entry
+    npx vite --configLoader runner --port 5173 --host 127.0.0.1
+
+- **Build:** none (pnpm workspace). **Required env:** none. **Auth:** none.
+- **Seed:** `python tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 --out <path>`
+  (also `--workspace`, default `ugx-baseline`). **This script cannot run under this repository's
+  virtualenv** — see the limitation note under *Vendored reset/seed tools*.
+- **Pitfalls:** must be launched from the `browser-entry` package — the
+  `pnpm -r --filter … --` form does not forward `--host`/`--port`, and Vite then binds IPv6
+  localhost only while the readiness gate polls 127.0.0.1. Port 5173 is Vite's default, so it
+  collides with any other Vite dev server on the machine. The app is **state-gated**: with an empty
+  IndexedDB it renders only "No workspace selected / Create a workspace to get started". Because
+  AutoE2E gets a fresh Chrome profile per run, its database is always empty unless seeded first.
+  The router is hash-based (`/ws#route=ws-home&wsName=<name>`), not the `/ws/<name>` path the route
+  constants suggest; `configs/BANGLE_IO.json` targets the app root rather than the harness's
+  workspace entry URL, because a fresh profile has no such workspace.
+
+#### Node version
+
+`node v25.9.0` is on PATH. Epic-stack declares `engines.node ^22.18.0`, and RWA declares
+`^22.0.0 || ^24.0.0` with `.nvmrc` `22.20.0` — both narrower than what is installed. The live
+services were verified running under v25.9.0 and healthy, so the constraint is advisory for
+starting them; a fresh dependency install may still warn or refuse.
+
+### Vendored reset/seed tools
+
+`services.json` refers to these three as `tools/...` "in the explorer repo", but they are **absent
+from `/Users/stephenhe/Projects/ui-graph-explorer/tools/`**, the checkout that note reads as naming.
+They are vendored here from `ui-graph-explorer-integration` so the harness is self-contained:
+
+| vendored path | upstream commit | reset target |
 |---|---|---|
-| `epic_stack_reset.sh` | restores a pristine seeded SQLite snapshot (the seed uses faker, so re-seeding is not reproducible) | no arguments; directory via `EPIC_STACK_REPO` |
-| `keystone_blog_reset.sh` | restores `keystone-example.pristine.db` | no arguments; directory via `KEYSTONE_BLOG_DIR` |
-| `bangle_seed_state.py` | captures the one prerequisite workspace by driving the app's own creation flow | `python tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 --out <path>` (also `--workspace`, default `ugx-baseline`) |
+| `tools/epic_stack_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | `prisma/data.db` |
+| `tools/keystone_blog_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | `keystone-example.db` |
+| `tools/bangle_seed_state.py` | `94e2734960ebef93c0e9b5900b788c2c3b7fab5c` | IndexedDB workspace baseline |
 
-**Treat the harness as not self-contained**: reproducing a reset requires the
-`ui-graph-explorer-integration` checkout in addition to `general-agent-eval`, and `services.json`'s
-`tools/` paths are relative to a repo it does not name. The July subjects in `benchmark/` used none
-of these scripts — they have no reset tooling in this repository.
+Upstream repo `git@github.com:stephenhe1/UI-Graph-Explorer.git`, local checkout
+`/Users/stephenhe/Projects/ui-graph-explorer-integration`. Each file carries a provenance header and
+is otherwise byte-identical to its upstream commit. **Upstream is authoritative** — re-sync from
+those commits rather than editing the copies.
+
+**Known limitation — `bangle_seed_state.py` is vendored but not runnable here.** It imports
+`playwright` and `ui_graph.restoration._IDB_EXPORT_JS`, and resolves the latter through
+`sys.path.insert(<script dir>/../src)`, which in this repository does not exist. Neither dependency
+is part of AutoE2E. It runs when invoked with the upstream checkout's interpreter:
+
+    /Users/stephenhe/Projects/ui-graph-explorer-integration/.venv/bin/python \
+        tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 --out <path>
+
+So bangle-io's client-state seeding still depends on that external checkout. The two shell reset
+scripts have no such dependency and run standalone.
+
+### July-as-run configs
+
+Two independent checkouts of the Cypress RealWorld App exist, at different revisions:
+
+| path | revision | role |
+|---|---|---|
+| `benchmark/cypress-realworld-app` | `bdf6169` | the July `CYPRESS_RWA` run's target |
+| `.../new-benchmark-repos/cypress-realworld-app` | `6486a7e` | the five-subject harness target, port 5182 |
+
+`6486a7e` is a direct ancestor of `bdf6169`, exactly one commit behind; that commit is a
+`@percy/cypress` devDependency bump, so the two are equivalent for application behaviour.
+
+The distinction that matters is **which config points where**:
+
+- `runs/2026-07/configs-as-run/CYPRESS_RWA.json` targets `http://localhost:3000/` — the original
+  July checkout under `benchmark/`. This is what the historical run recorded in `runs/2026-07/`
+  actually used, confirmed by the config's mtime predating the run's start.
+- `configs/CYPRESS_RWA.json` targets `http://127.0.0.1:5182/` — the `new-benchmark-repos` clone.
+  It was repointed on 2026-09-04 because port 3000 now serves Epic-stack, not RWA.
+
+A `CYPRESS_RWA` run made today therefore exercises a **different clone** than the July run. Use
+`runs/2026-07/configs-as-run/` when reproducing the July numbers, and `configs/` for new runs.
 
 ### Known limitations affecting reproducibility
 
