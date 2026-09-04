@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import json
 import signal
@@ -11,6 +12,13 @@ from autoe2e.loop_utils import *
 from autoe2e.mongo_utils import *
 from autoe2e.manual_ndd import *
 from autoe2e.llm_api_call import _resolve_api_key
+from autoe2e.browser import shutdown_driver_container
+from autoe2e.crawler.budget import (
+    BUDGET_REASONS,
+    CrawlBudget,
+    INTERRUPTED_REASON,
+    classify_outcome,
+)
 
 
 APP_NAME = os.getenv('APP_NAME', 'PETCLINIC')
@@ -19,6 +27,9 @@ STATUS_FILE = f'./tmp/status_{APP_NAME}.json'
 START_TIME = time.time()
 LOOP_COUNTER = 0
 STOP_REQUESTED = False
+STOP_REASON = None      # a budget name, or 'interrupted'
+EXIT_STATUS = 'failed'  # pessimistic until the run actually reaches an end state
+ERROR_MSG = None
 
 
 def handle_stop_signal(signum, frame):
@@ -66,22 +77,47 @@ def save_state_graph(crawl_context, app_name):
     )
 
 
-def write_status(loop_counter, queue_size, states_discovered, current_state_id=None, current_action=None, error=None):
-    status = {
+BUDGET = None
+
+
+def write_status(
+    loop_counter,
+    queue_size,
+    states_discovered,
+    current_state_id=None,
+    current_action=None,
+    error=None,
+    status='running',
+    budget_triggered=None,
+):
+    """Write run status.
+
+    `status` is one of: running, completed, budget_exhausted, interrupted, failed. It used to be
+    only 'running' or 'error' -- a finished crawl was left saying "running" with current_state
+    set to 'DONE', which is why the July status files cannot be told apart from a crawl that
+    died mid-flight.
+
+    `loop_counter` is kept for compatibility with tooling that reads the older files;
+    `actions_executed` is the same number under the name that says what it is.
+    """
+    payload = {
         'app': APP_NAME,
         'started_at': datetime.datetime.fromtimestamp(START_TIME).isoformat(),
         'elapsed_seconds': round(time.time() - START_TIME, 1),
         'loop_counter': loop_counter,
+        'actions_executed': loop_counter,
         'queue_size': queue_size,
         'states_discovered': states_discovered,
         'current_state': current_state_id,
         'current_action': current_action,
         'last_updated': datetime.datetime.now().isoformat(),
-        'status': 'error' if error else 'running',
+        'status': 'failed' if error else status,
+        'budget': BUDGET.describe() if BUDGET is not None else None,
+        'budget_triggered': budget_triggered,
         'error': error,
     }
     with open(STATUS_FILE, 'w') as f:
-        json.dump(status, f, indent=2)
+        json.dump(payload, f, indent=2)
 
 
 try:
@@ -116,10 +152,16 @@ try:
     action_func_db.delete_many({ 'app': APP_NAME })
     func_db.delete_many({ 'app': APP_NAME })
 
+    BUDGET = CrawlBudget.from_config(config_obj)
+    if BUDGET.is_limited:
+        logger.info(f'Crawl budget: {BUDGET.describe()}')
+    else:
+        logger.info('Crawl budget: unlimited (no crawl.* limits configured)')
+
     write_status(0, len(crawl_context.crawl_queue), len(crawl_context.state_machine.state_graph.states))
     logger.info(f'=== Crawl started. Queue size: {len(crawl_context.crawl_queue)} ===')
 
-    while len(crawl_context.crawl_queue) > 0 and not STOP_REQUESTED:
+    while len(crawl_context.crawl_queue) > 0 and not STOP_REQUESTED and STOP_REASON is None:
         state: State = crawl_context.crawl_queue.dequeue()
         logger.info(f"Visiting state {state.get_id(StateIdEvaluator.BY_ACTIONS)}")
         crawl_context.state_machine.set_current_state(state)
@@ -141,7 +183,24 @@ try:
 
         for action in current_actions:
             if STOP_REQUESTED:
+                STOP_REASON = INTERRUPTED_REASON
                 break
+
+            # Budget is checked BEFORE executing, so a declared limit is never overshot. This
+            # only decides whether to schedule more work; the exploration algorithm itself is
+            # untouched, and everything produced so far is preserved by the teardown below.
+            triggered = BUDGET.exceeded(
+                LOOP_COUNTER, len(crawl_context.state_machine.state_graph.states))
+            if triggered is not None:
+                STOP_REASON = triggered
+                logger.info(
+                    f'Crawl budget reached ({triggered}); stopping cleanly after '
+                    f'{LOOP_COUNTER} action(s), '
+                    f'{len(crawl_context.state_machine.state_graph.states)} state(s), '
+                    f'{round(BUDGET.elapsed(), 1)}s'
+                )
+                break
+
             LOOP_COUNTER += 1
 
             write_status(
@@ -247,26 +306,56 @@ try:
 
         save_state_graph(crawl_context, APP_NAME)
 
-    crawl_context.driver.quit()
+    EXIT_STATUS, _ = classify_outcome(STOP_REASON, STOP_REQUESTED)
 
-    write_status(
-        LOOP_COUNTER,
-        0,
-        len(crawl_context.state_machine.state_graph.states),
-        current_state_id='DONE',
-    )
-    logger.info(f'=== Crawl complete. {LOOP_COUNTER} actions processed, {len(crawl_context.state_machine.state_graph.states)} states discovered ===')
-
-    save_state_graph(crawl_context, APP_NAME)
-
-except Exception as e:
+# BaseException, not Exception: a KeyboardInterrupt must still reach the teardown below. It
+# would otherwise skip it entirely and leak the browser -- the exact failure this is here to
+# prevent.
+except BaseException as e:
     import traceback
-    error_msg = f'{type(e).__name__}: {e}'
-    logger.error(f'Crawl failed: {error_msg}')
+    EXIT_STATUS = 'failed'
+    ERROR_MSG = f'{type(e).__name__}: {e}'
+    logger.error(f'Crawl failed: {ERROR_MSG}')
     logger.error(traceback.format_exc())
-    write_status(LOOP_COUNTER, 0, 0, error=error_msg)
+
+finally:
+    # Runs on every path: normal completion, budget exhaustion, exception and interruption.
+    # Order matters -- persist results first, then close the browser, so a failure to quit
+    # cannot cost us the run's output.
+    states_discovered = 0
     try:
-        crawl_context.driver.quit()
-    except:
-        pass
-    raise
+        if 'crawl_context' in dir() and getattr(crawl_context, 'state_machine', None) is not None:
+            states_discovered = len(crawl_context.state_machine.state_graph.states)
+            save_state_graph(crawl_context, APP_NAME)
+            logger.info(f'Saved state graph to ./report/{APP_NAME}.json')
+    except Exception as save_err:  # noqa: BLE001
+        logger.error(f'Could not save state graph: {type(save_err).__name__}: {save_err}')
+
+    quit_ok = shutdown_driver_container()
+    logger.info(f'Browser teardown: {"driver quit" if quit_ok else "no driver to quit"}')
+
+    try:
+        write_status(
+            LOOP_COUNTER,
+            len(crawl_context.crawl_queue) if 'crawl_context' in dir() else 0,
+            states_discovered,
+            current_state_id='DONE' if EXIT_STATUS in ('completed', 'budget_exhausted') else None,
+            status=EXIT_STATUS,
+            budget_triggered=STOP_REASON if STOP_REASON in BUDGET_REASONS else None,
+            error=ERROR_MSG,
+        )
+    except Exception as status_err:  # noqa: BLE001
+        logger.error(f'Could not write status: {type(status_err).__name__}: {status_err}')
+
+    logger.info(
+        f'=== Crawl {EXIT_STATUS}. {LOOP_COUNTER} action(s) executed, '
+        f'{states_discovered} state(s) discovered, '
+        f'{round(time.time() - START_TIME, 1)}s elapsed'
+        + (f', budget_triggered={STOP_REASON}' if STOP_REASON in BUDGET_REASONS else '')
+        + ' ==='
+    )
+
+# completed and budget_exhausted are both successful outcomes: the budget is a declared stopping
+# rule, not an error. An interruption exits 130 by convention; a real failure exits 1.
+_, EXIT_CODE = classify_outcome(STOP_REASON, STOP_REQUESTED, ERROR_MSG)
+sys.exit(EXIT_CODE)
