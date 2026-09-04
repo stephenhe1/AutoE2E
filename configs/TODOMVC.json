@@ -3,6 +3,15 @@
   "driver": {
     "base_url": "http://127.0.0.1:5180/"
   },
+  "browser": {
+    "headless": true,
+    "detach": false
+  },
+  "crawl": {
+    "max_actions": 500,
+    "max_states": 100,
+    "max_wall_seconds": 3600
+  },
   "lifecycle": {
     "on_visit": [],
     "on_state_discovery": []

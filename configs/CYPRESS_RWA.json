@@ -3,6 +3,15 @@
   "driver": {
     "base_url": "http://localhost:5182/"
   },
+  "browser": {
+    "headless": true,
+    "detach": false
+  },
+  "crawl": {
+    "max_actions": 500,
+    "max_states": 100,
+    "max_wall_seconds": 3600
+  },
   "lifecycle": {
     "on_visit": [
       [
