@@ -184,7 +184,7 @@ of identity, since a stale clone on a recycled port answers happily as the wrong
   `prisma generate --sql`).
 - **Required env:** `NODE_ENV=production` **and** `MOCKS=true` — both are required by the registry.
   The server reads `PORT` from the environment.
-- **Auth:** seeded user `kody` / `kodylovesyou`.
+- **Auth:** seeded user `kody` / `kodylovesyou`, applied automatically by the `FormLogin` lifecycle hook in `configs/EPIC_STACK.json`.
 - **Reset:** `bash tools/ensure_snapshots.sh && bash tools/epic_stack_reset.sh` (directory
   overridable via `EPIC_STACK_REPO`). Restores `prisma/pristine.db` over `prisma/data.db` and
   removes `-shm`/`-wal` plus `other/cache.db`. `prisma/pristine.db` is **untracked in the subject
@@ -204,7 +204,7 @@ of identity, since a stale clone on a recycled port answers happily as the wrong
 
 - **Build:** none (Yarn 1). **Required env:** none — the script sets what the two halves need.
 - **Base URL:** `http://localhost:5182/` — **the `localhost` name, not `127.0.0.1`** (see below).
-- **Auth:** password `s3cret`; the seed database's first user is `Heath93`.
+- **Auth:** `Heath93` / `s3cret`, applied automatically by the `FormLogin` lifecycle hook in `configs/CYPRESS_RWA.json`.
 - **Reset:** `--reset` copies `data/database-seed.json` over `data/database.json`. This is the one
   subject whose reset is a plain file copy rather than a snapshot restore.
 - **Health:** the script gates **both** halves on real identity strings, not a sleep — the API's
@@ -331,25 +331,68 @@ The distinction that matters is **which config points where**:
 A `CYPRESS_RWA` run made today therefore exercises a **different clone** than the July run. Use
 `runs/2026-07/configs-as-run/` when reproducing the July numbers, and `configs/` for new runs.
 
+### Lifecycle hooks
+
+`lifecycle.on_visit` used to be parsed by `LifecycleConfig` and read by nothing. It now runs, once,
+in `initialize_variables()` — after the first navigation and **before** the initial state is
+captured. That placement matters: the whole crawl shares one browser, because `load_state()`
+re-navigates to `base_url` for each state but never restarts Chrome, so a session cookie or an
+IndexedDB record established by a hook persists for the entire run.
+
+A spec entry is `[module, ClassName]` or `[module, ClassName, {params}]`. The two-element form still
+parses, so old configs are unaffected. Use `""` or `"autoe2e"` as the module for a built-in. A hook
+that raises **aborts the crawl** — deliberately, because crawling a logged-out application produces
+a confidently wrong result, which is worse than stopping.
+
+**`FormLogin`** authenticates through the application's own form, so nothing about the auth path is
+bypassed or assumed. It verifies the result via `success_selector` or `success_url_excludes` and
+raises if it cannot confirm; without one of those it warns that the login is UNVERIFIED. Credentials
+may be written as `${ENV_VAR}` to read from the environment — the committed values are the subjects'
+public fixture credentials, which is what makes a run reproducible.
+
+    ["autoe2e", "FormLogin", {
+      "url": "/login",
+      "username_selector": "#login-form-username",
+      "password_selector": "#login-form-password",
+      "submit_selector": "#login-form button[type=submit]",
+      "username": "kody", "password": "kodylovesyou",
+      "success_url_excludes": "/login"
+    }]
+
+**`ClientState`** seeds browser-local state from a baseline captured by
+`tools/bangle_seed_state.py`, applying `local_storage` and then importing `indexed_db` through the
+vendored `autoe2e/crawler/lifecycle/idb_js.py`, and finally navigating to the baseline's landing URL.
+
+    ["autoe2e", "ClientState", { "baseline": "harness/state/bangle-io-baseline.json" }]
+
+Configured for three subjects: `EPIC_STACK` and `CYPRESS_RWA` log in; `BANGLE_IO` seeds its
+workspace. Verify without crawling:
+
+```bash
+python tools/verify_hooks.py                 # all three
+python tools/verify_hooks.py EPIC_STACK      # one
+```
+
+It runs the same `Config`, driver and `run_hooks` that a crawl would, then stops — so a pass means
+the pre-crawl phase works, with no LLM spend.
+
 ### Known limitations affecting reproducibility
 
-- **No authentication support.** `lifecycle.on_visit` / `on_state_discovery` are parsed by
-  `autoe2e/crawler/config/lifecycle_config.py` but never read anywhere in the codebase, and form
-  values come from an LLM shown only the form's `outerHTML` (`create_form_filling_values`). A crawl
-  cannot log in, so login-gated surfaces stay unexplored.
+- **`on_state_discovery` is still inert.** `lifecycle.on_visit` now runs (see *Lifecycle hooks*),
+  but `on_state_discovery` is parsed and read nowhere. Configs leave it empty.
+- **Form values are still LLM-generated.** Outside the login handled by a hook,
+  `create_form_filling_values` sees only a form's `outerHTML`, so it cannot know
+  domain-specific valid values.
 - **Fresh browser profile per run.** `autoe2e/browser/driver.py` starts Chrome without a
   `--user-data-dir`, so `localStorage` and IndexedDB begin empty every run. Subjects that gate their
   UI on client state (bangle-io renders only "Create a workspace to get started" with an empty
   database) present only that empty state unless seeded first.
 - **Chrome is not headless** and is created with `detach: True`, so runs open visible windows and
   the browser outlives the process.
-- **The client-state baseline cannot be applied to an AutoE2E crawl.**
-  `tools/bangle_seed_state.py` now captures `harness/state/bangle-io-baseline.json` from this
-  repository, but AutoE2E has no mechanism to load it into its own Selenium session: `lifecycle` is
-  inert (above), so there is no hook that runs before the crawl starts. The baseline is usable by the
-  harness and by any tool that can seed a profile; AutoE2E itself still begins on bangle-io's
-  empty-workspace screen. Closing this gap needs a real lifecycle hook in AutoE2E, not another
-  script.
+- **One WebDriver per process.** `DriverContainer` is an `AbstractSingleton`, so
+  `initialize_driver` returns the same browser for the life of the interpreter. `main.py` crawls a
+  single `APP_NAME` per run so this is fine there, but a script handling several subjects must fork
+  per subject — `tools/verify_hooks.py` does.
 
 ### LLM credential
 
@@ -362,6 +405,12 @@ A `CYPRESS_RWA` run made today therefore exercises a **different clone** than th
 `.env.example` carries the variable with an empty value. **The real key is never committed**; `.env`
 itself is gitignored (`.gitignore:123`). `python tools/preflight.py` reports only whether a key is
 *present*, never its value, and does not invoke `op`.
+
+`main.py` resolves the credential **before** anything slow or destructive, in particular before the
+`delete_many` calls that clear the previous run's rows for this app. Those deletes used to be the
+first statements in the file, so a typo in `APP_NAME`, a dead service, a missing credential or a
+failed login destroyed the previous run's output and only then failed — and nothing writes those
+rows to disk, so they were the only copy.
 
 Because models and chains are constructed lazily (`_LazyModel` / `_LazyChain`), importing AutoE2E
 and parsing every config works with no credential at all — verified by preflight, which imports

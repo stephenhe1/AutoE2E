@@ -4,7 +4,21 @@
     "base_url": "http://127.0.0.1:3000/"
   },
   "lifecycle": {
-    "on_visit": [],
+    "on_visit": [
+      [
+        "autoe2e",
+        "FormLogin",
+        {
+          "url": "/login",
+          "username_selector": "#login-form-username",
+          "password_selector": "#login-form-password",
+          "submit_selector": "#login-form button[type=submit]",
+          "username": "kody",
+          "password": "kodylovesyou",
+          "success_url_excludes": "/login"
+        }
+      ]
+    ],
     "on_state_discovery": []
   }
 }

@@ -4,7 +4,15 @@
     "base_url": "http://127.0.0.1:5173/"
   },
   "lifecycle": {
-    "on_visit": [],
+    "on_visit": [
+      [
+        "autoe2e",
+        "ClientState",
+        {
+          "baseline": "harness/state/bangle-io-baseline.json"
+        }
+      ]
+    ],
     "on_state_discovery": []
   }
 }

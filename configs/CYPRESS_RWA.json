@@ -4,7 +4,21 @@
     "base_url": "http://localhost:5182/"
   },
   "lifecycle": {
-    "on_visit": [],
+    "on_visit": [
+      [
+        "autoe2e",
+        "FormLogin",
+        {
+          "url": "/signin",
+          "username_selector": "#username",
+          "password_selector": "#password",
+          "submit_selector": "form button[type=submit]",
+          "username": "Heath93",
+          "password": "s3cret",
+          "success_url_excludes": "/signin"
+        }
+      ]
+    ],
     "on_state_discovery": []
   }
 }

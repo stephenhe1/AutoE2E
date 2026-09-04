@@ -10,6 +10,7 @@ from autoe2e.infer_utils import *
 from autoe2e.loop_utils import *
 from autoe2e.mongo_utils import *
 from autoe2e.manual_ndd import *
+from autoe2e.llm_api_call import _resolve_api_key
 
 
 APP_NAME = os.getenv('APP_NAME', 'PETCLINIC')
@@ -84,9 +85,6 @@ def write_status(loop_counter, queue_size, states_discovered, current_state_id=N
 
 
 try:
-    action_func_db.delete_many({ 'app': APP_NAME })
-    func_db.delete_many({ 'app': APP_NAME })
-
     crawl_context: CrawlContext = CrawlContext()
     crawl_context = crawl_context.set_temp_var('config_path', f'./configs/{APP_NAME}.json')
 
@@ -98,10 +96,25 @@ try:
 
     crawl_context = crawl_context.set_config(config_obj)
 
+    # Resolve the LLM credential up front. The crawl needs it for its very first state, and
+    # everything below this line is either slow or destructive, so failing here is cheapest.
+    logger.info('Resolving LLM credential')
+    _resolve_api_key()
+
     driver = initialize_driver(config_obj)
     crawl_context = crawl_context.set_driver(driver)
 
+    # Runs lifecycle on_visit hooks (login, client-state seeding) before the first state is
+    # captured, so a failed login aborts here rather than producing a logged-out crawl.
     crawl_context = initialize_variables(crawl_context)
+
+    # ONLY NOW discard the previous run's predictions for this app. These deletes used to be
+    # the first statements in the file, which meant a typo in APP_NAME, a dead service, a
+    # missing credential or a failed login destroyed the previous run's rows and then failed --
+    # and those rows are the only copy of that run's output, since nothing writes them to disk.
+    logger.info(f'Clearing previous stored results for {APP_NAME}')
+    action_func_db.delete_many({ 'app': APP_NAME })
+    func_db.delete_many({ 'app': APP_NAME })
 
     write_status(0, len(crawl_context.crawl_queue), len(crawl_context.state_machine.state_graph.states))
     logger.info(f'=== Crawl started. Queue size: {len(crawl_context.crawl_queue)} ===')

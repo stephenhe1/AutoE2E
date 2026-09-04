@@ -6,6 +6,7 @@ from autoe2e.utils import logger
 from autoe2e.crawler.config import Config
 from autoe2e.browser import get_driver_container
 from autoe2e.crawler.crawl_context import CrawlContext
+from autoe2e.crawler.lifecycle import run_hooks
 from autoe2e.crawler.state import State
 from autoe2e.crawler.action import Action, CandidateActionExtractor
 
@@ -26,6 +27,14 @@ def initialize_variables(crawl_context: CrawlContext) -> CrawlContext:
     logger.info('Initializing classes with initial state')
     
     crawl_context.driver.get(crawl_context.config.base_url)
+
+    # Pre-crawl lifecycle hooks. These run ONCE, here, because the whole crawl shares one
+    # browser: load_state() re-navigates to base_url for every state visit but never restarts
+    # Chrome, so a session cookie set here and any IndexedDB seeded here persist for the run.
+    #
+    # Hooks may navigate (a login form usually lives on its own page), so the initial state is
+    # captured from wherever the last hook left the browser, not from base_url.
+    run_hooks(crawl_context.config.on_visit, crawl_context, phase='on_visit')
 
     crawl_context.crawl_queue.reset()
     crawl_context.state_machine.reset()
