@@ -126,13 +126,24 @@ revisions below were confirmed against the live checkouts on 2026-09-04.
 | TodoMVC | `7d727bc458ed` | 5180 | `http://127.0.0.1:5180/` | `TODOMVC` | 30 s | none |
 | Keystone-blog | `a92fd4492135` | 3200 | `http://127.0.0.1:3200/` | `KEYSTONE_BLOG` | 180 s | none |
 | Epic-stack | `faaa21779c66` | 3000 | `http://127.0.0.1:3000/` | `EPIC_STACK` | 120 s | `kody` / `kodylovesyou` |
-| RWA | `6486a7efed0c` | 5182 (+3001 API) | `http://127.0.0.1:5182/` | `CYPRESS_RWA` | 30 s | `Heath93` / `s3cret` |
+| RWA | `6486a7efed0c` | 5182 (+3001 API) | `http://localhost:5182/` | `CYPRESS_RWA` | 30 s | `Heath93` / `s3cret` |
 | Bangle-io | `09e9b794e71b` | 5173 | `http://127.0.0.1:5173/` | `BANGLE_IO` | 90 s | none |
 
 Launch commands are quoted from the harness registry
 `general-agent-eval/resources/scripts/services.json` (`run` field, `${PORT}` substituted).
 `general-agent-eval/resources/scripts/run-with-service.sh` is the wrapper that builds, starts and
 health-gates a service before handing off. Health check is `GET <base URL>` for every subject.
+
+To check all five at once — configs, reachability, application identity, MongoDB, reset sources,
+and that AutoE2E loads with no LLM credential present:
+
+```bash
+source .venv/bin/activate
+python tools/preflight.py            # exits non-zero if anything blocking fails
+```
+
+It starts nothing and crawls nothing. Identity matching matters: a port answering is never proof
+of identity, since a stale clone on a recycled port answers happily as the wrong application.
 
 #### TodoMVC
 
@@ -155,8 +166,10 @@ health-gates a service before handing off. Health check is `GET <base URL>` for 
 - **Build:** none (pnpm workspace; dependencies installed at the monorepo root).
 - **Required env:** `PORT`, set by the command above. **Auth:** none — this example has no
   authentication.
-- **Reset:** `bash tools/keystone_blog_reset.sh` (directory overridable via `KEYSTONE_BLOG_DIR`).
-  Restores `keystone-example.pristine.db` over the live database and clears `-shm`/`-wal`.
+- **Reset:** `bash tools/ensure_snapshots.sh && bash tools/keystone_blog_reset.sh` (directory
+  overridable via `KEYSTONE_BLOG_DIR`). Restores `keystone-example.pristine.db` over the live
+  database and clears `-shm`/`-wal`. The snapshot itself is untracked in the subject repo, so
+  `ensure_snapshots.sh` installs it from this repository's committed fixture when absent.
 - **Pitfalls:** must be launched from the example directory — it resolves its Prisma client through
   the monorepo's `myprisma` alias, so starting from the repo root fails. First boot migrates and
   rebuilds the Admin UI, which is why the health timeout is 180 s, the longest of the five. The repo
@@ -172,10 +185,12 @@ health-gates a service before handing off. Health check is `GET <base URL>` for 
 - **Required env:** `NODE_ENV=production` **and** `MOCKS=true` — both are required by the registry.
   The server reads `PORT` from the environment.
 - **Auth:** seeded user `kody` / `kodylovesyou`.
-- **Reset:** `bash tools/epic_stack_reset.sh` (directory overridable via `EPIC_STACK_REPO`).
-  Restores `prisma/pristine.db` over `prisma/data.db` and removes `-shm`/`-wal` plus
-  `other/cache.db`. Note `prisma/pristine.db` is **untracked** in the subject checkout: if it is
-  lost it cannot be restored from that repo.
+- **Reset:** `bash tools/ensure_snapshots.sh && bash tools/epic_stack_reset.sh` (directory
+  overridable via `EPIC_STACK_REPO`). Restores `prisma/pristine.db` over `prisma/data.db` and
+  removes `-shm`/`-wal` plus `other/cache.db`. `prisma/pristine.db` is **untracked in the subject
+  checkout**, so it is committed here as `harness/fixtures/epic-stack/pristine.db` and
+  `ensure_snapshots.sh` installs it when missing — the snapshot cannot be regenerated
+  deterministically, because `prisma/seed.ts` uses faker.
 - **Pitfalls:** the repo's own scripts wrap `node` in `cross-env`, a local devDependency that is not
   on PATH for a plain service shell, which is why the command is bare `node index.ts` with the
   environment set externally. Port 3000 has previously been occupied by a baseline clone of this
@@ -183,26 +198,46 @@ health-gates a service before handing off. Health check is `GET <base URL>` for 
 
 #### RWA (cypress-realworld-app)
 
-    # frontend
-    cd .../cypress-realworld-app && yarn start:react -- --port 5182 --host 127.0.0.1
-    # API sidecar, separate process
-    cd .../cypress-realworld-app && yarn start:api
+    bash tools/rwa_up.sh                 # web 5182, api 3001, both health-gated
+    bash tools/rwa_up.sh --reset         # reseed data/database.json first
+    bash tools/rwa_up.sh --down          # stop both halves
 
-- **Build:** none (Yarn 1). **Required env:** none.
-- **Auth:** password `s3cret`; the seed database's first user is `Heath93` (the harness resolves the
-  username from the live `data/database.json` at scaffold time, falling back to
-  `Katharina_Bernier`).
-- **Reset:** `cp data/database-seed.json data/database.json`. This is the one subject with no
-  vendored script — the reset is a single file copy, performed by the harness arm drivers.
-  `data/empty-seed.json` also exists; the harness uses `database-seed.json`.
-- **Health:** frontend `GET /` with a 30 s timeout. **The API on 3001 has no health path defined in
-  the registry** — the harness simply sleeps 20 s after launching it. Confirm 3001 answers before
-  relying on it.
-- **Pitfalls:** the registry's `run` starts the **frontend only**; with no API the app renders
-  login/signup against a dead backend and nothing persists. The frontend bakes its API URL in at
-  build time from `.env` *files* and ignores the shell environment, so exporting
-  `VITE_BACKEND_PORT` has no effect and the page keeps calling the committed default of 3001. Two
-  checkouts of this application exist at different revisions — see *July-as-run configs* below.
+- **Build:** none (Yarn 1). **Required env:** none — the script sets what the two halves need.
+- **Base URL:** `http://localhost:5182/` — **the `localhost` name, not `127.0.0.1`** (see below).
+- **Auth:** password `s3cret`; the seed database's first user is `Heath93`.
+- **Reset:** `--reset` copies `data/database-seed.json` over `data/database.json`. This is the one
+  subject whose reset is a plain file copy rather than a snapshot restore.
+- **Health:** the script gates **both** halves on real identity strings, not a sleep — the API's
+  `GET /` must return `Cypress Realworld App - backend` (backend/app.ts:98) and the frontend's `/`
+  must return `Cypress Real World App`. It then preflights CORS before reporting READY.
+
+**Why this needs a script.** RWA is the only subject where the two halves resolve their ports by
+different mechanisms, and they can silently disagree:
+
+| half | reads | consequence |
+|---|---|---|
+| frontend | `loadEnv(mode, cwd, "VITE")` in `vite.config.ts` — `.env` **and `.env.local`, the latter winning**; inlined at config time via `define: { "process.env": env }` | ignores the shell entirely |
+| backend | `require("dotenv").config()` in `backend/app.ts` — **only `.env`**, and never overrides an existing environment variable | honours the shell |
+
+An untracked `.env.local` left behind by an earlier full-stack helper (`PORT=6182`,
+`VITE_BACKEND_PORT=6183`) therefore pointed the frontend at 6183 while the backend defaulted to
+`.env`'s 3001 — and both ports were dead. `tools/rwa_up.sh` owns both sides: it writes
+`.env.local` for the frontend (backing up any pre-existing one, since it is untracked and
+unrecoverable) and passes the ports in the environment for the backend.
+
+**Two failure modes worth knowing**, because both leave a *healthy-looking* service that cannot
+work:
+
+1. Starting the API without `PORT=<web port>` in its environment. `backend/app.ts:31` sets
+   `origin: http://localhost:${frontendPort}` from `process.env.PORT`, and `.env` pins `PORT=3000`,
+   so the API answers health checks while returning
+   `Access-Control-Allow-Origin: http://localhost:3000` and refusing every browser call.
+2. Loading the page as `http://127.0.0.1:5182`. The CORS allow-list is a **single literal origin on
+   the `localhost` hostname**, so `127.0.0.1` is a different origin and every API request is
+   blocked — which is why `configs/CYPRESS_RWA.json` uses `http://localhost:5182/`.
+
+Verified end to end with a real browser: `POST /login` → 200, `/notifications` → 200,
+`/graphql` → 200, session established, zero failed requests and zero CORS errors.
 
 #### Bangle-io
 
@@ -210,9 +245,16 @@ health-gates a service before handing off. Health check is `GET <base URL>` for 
     npx vite --configLoader runner --port 5173 --host 127.0.0.1
 
 - **Build:** none (pnpm workspace). **Required env:** none. **Auth:** none.
-- **Seed:** `python tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 --out <path>`
-  (also `--workspace`, default `ugx-baseline`). **This script cannot run under this repository's
-  virtualenv** — see the limitation note under *Vendored reset/seed tools*.
+- **Seed:** runs from this repository, no other checkout required:
+
+      python tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 \
+          --out harness/state/bangle-io-baseline.json
+
+  (also `--workspace`, default `ugx-baseline`). It drives the app's own creation flow with
+  playwright and writes a 900-byte baseline. The capture is **deterministic** — two consecutive
+  runs are byte-identical, because the script pins the volatile fields — and the result is
+  committed at `harness/state/bangle-io-baseline.json`, so the baseline is recoverable without
+  re-running the seed.
 - **Pitfalls:** must be launched from the `browser-entry` package — the
   `pnpm -r --filter … --` form does not forward `--host`/`--port`, and Vite then binds IPv6
   localhost only while the readiness gate polls 127.0.0.1. Port 5173 is Vite's default, so it
@@ -232,31 +274,39 @@ starting them; a fresh dependency install may still warn or refuse.
 
 ### Vendored reset/seed tools
 
-`services.json` refers to these three as `tools/...` "in the explorer repo", but they are **absent
-from `/Users/stephenhe/Projects/ui-graph-explorer/tools/`**, the checkout that note reads as naming.
-They are vendored here from `ui-graph-explorer-integration` so the harness is self-contained:
+`services.json` refers to three deterministic-reset scripts as `tools/...` "in the explorer repo",
+but they are **absent from `/Users/stephenhe/Projects/ui-graph-explorer/tools/`**, the checkout that
+note reads as naming. They live in `ui-graph-explorer-integration` and are vendored here, so the
+harness needs no other research checkout at runtime:
 
-| vendored path | upstream commit | reset target |
+| vendored path | upstream commit | role |
 |---|---|---|
-| `tools/epic_stack_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | `prisma/data.db` |
-| `tools/keystone_blog_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | `keystone-example.db` |
-| `tools/bangle_seed_state.py` | `94e2734960ebef93c0e9b5900b788c2c3b7fab5c` | IndexedDB workspace baseline |
+| `tools/epic_stack_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | restore `prisma/data.db` |
+| `tools/keystone_blog_reset.sh` | `bb9da86187ef022d5fed5ab6c2d832d4b83b0a9a` | restore `keystone-example.db` |
+| `tools/bangle_seed_state.py` | `94e2734960ebef93c0e9b5900b788c2c3b7fab5c` | capture the IndexedDB workspace baseline |
+| `tools/idb_export_js.py` | `b07e8a846e8d9ec6c34ecf2a68efb9d528eb5879` | the one constant the seed script needs |
 
 Upstream repo `git@github.com:stephenhe1/UI-Graph-Explorer.git`, local checkout
-`/Users/stephenhe/Projects/ui-graph-explorer-integration`. Each file carries a provenance header and
-is otherwise byte-identical to its upstream commit. **Upstream is authoritative** — re-sync from
-those commits rather than editing the copies.
+`/Users/stephenhe/Projects/ui-graph-explorer-integration`. Provenance is pinned to **per-file
+commits**, not that checkout's HEAD, which moves. **Upstream is authoritative** — re-sync from those
+commits rather than editing the copies.
 
-**Known limitation — `bangle_seed_state.py` is vendored but not runnable here.** It imports
-`playwright` and `ui_graph.restoration._IDB_EXPORT_JS`, and resolves the latter through
-`sys.path.insert(<script dir>/../src)`, which in this repository does not exist. Neither dependency
-is part of AutoE2E. It runs when invoked with the upstream checkout's interpreter:
+The two shell scripts are byte-identical to their upstream commits apart from a provenance header.
 
-    /Users/stephenhe/Projects/ui-graph-explorer-integration/.venv/bin/python \
-        tools/bangle_seed_state.py --base-url http://127.0.0.1:5173 --out <path>
+`tools/bangle_seed_state.py` differs by **two lines**, recorded in its own header. Upstream it did:
 
-So bangle-io's client-state seeding still depends on that external checkout. The two shell reset
-scripts have no such dependency and run standalone.
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+    from ui_graph.restoration import _IDB_EXPORT_JS
+
+`<script dir>/../src` exists in the upstream repo but not here, so the script could not run at all
+from AutoE2E; and importing the real `ui_graph.restoration` would pull in structlog and the rest of
+that package for the sake of one constant. That constant is a self-contained JavaScript source
+string with no Python dependencies, so it alone is vendored as `tools/idb_export_js.py` (verified
+byte-identical to upstream) and the import now resolves to it. Observable behaviour is unchanged:
+the same JS is evaluated in the page.
+
+Bangle-io's seeding therefore no longer depends on another checkout. Verified by running it from
+this repository against the live app and getting byte-identical output twice.
 
 ### July-as-run configs
 
@@ -293,6 +343,47 @@ A `CYPRESS_RWA` run made today therefore exercises a **different clone** than th
   database) present only that empty state unless seeded first.
 - **Chrome is not headless** and is created with `detach: True`, so runs open visible windows and
   the browser outlives the process.
+- **The client-state baseline cannot be applied to an AutoE2E crawl.**
+  `tools/bangle_seed_state.py` now captures `harness/state/bangle-io-baseline.json` from this
+  repository, but AutoE2E has no mechanism to load it into its own Selenium session: `lifecycle` is
+  inert (above), so there is no hook that runs before the crawl starts. The baseline is usable by the
+  harness and by any tool that can seed a profile; AutoE2E itself still begins on bangle-io's
+  empty-workspace screen. Closing this gap needs a real lifecycle hook in AutoE2E, not another
+  script.
+
+### LLM credential
+
+`autoe2e/llm_api_call.py` resolves the key once, lazily, in this order:
+
+1. `LITELLM_API_KEY` from the environment (`.env` is loaded via `python-dotenv`);
+2. failing that, `op read op://Employee/API Credentials/credential` via the 1Password CLI;
+3. failing that, `RuntimeError` — raised on **first use**, not at import.
+
+`.env.example` carries the variable with an empty value. **The real key is never committed**; `.env`
+itself is gitignored (`.gitignore:123`). `python tools/preflight.py` reports only whether a key is
+*present*, never its value, and does not invoke `op`.
+
+Because models and chains are constructed lazily (`_LazyModel` / `_LazyChain`), importing AutoE2E
+and parsing every config works with no credential at all — verified by preflight, which imports
+`llm_api_call`, `mongo_utils`, `infer_utils` and `loop_utils` and parses all 15 configs with
+`LITELLM_API_KEY` unset. A missing key blocks the **first LLM call of a crawl**, nothing earlier.
+
+### Repository data and provenance
+
+- **`dataset_repos.json`** — 353 `{repo, url}` records: the candidate repository pool the study's
+  subjects were drawn from, including TodoMVC, Keystone, Epic-stack, RWA, Bangle-io and umami. No
+  duplicate URLs, every record well-formed. It is referenced by no code, so it is committed as
+  provenance data rather than as an input. It is byte-identical to an untracked copy in
+  `general-agent-eval`, so this is now the preserved copy.
+- **`benchmark/dimeshift/dimeshift`** — a submodule pinned to
+  `440898e8e48b9a85f4d3c7dfa374e4abd7e27423` of `https://github.com/jeka-kiselyov/dimeshift.git`.
+  That is the upstream's `master` head, and the same short SHA that names the benchmark's Docker
+  image tag `webappdockers/dimeshift:440898e`, so the pin records which application revision the
+  image under test was built from. The application runs from that image, never from a source
+  checkout, so the submodule is deliberately left uninitialised — `git submodule status` showing a
+  `-` prefix is the expected state. Until 2026-09-04 the gitlink had **no `.gitmodules` entry** and
+  so could not be resolved at all; the mapping was added without changing the recorded commit. See
+  `benchmark/dimeshift/README.md`.
 
 ## LLM Prompts
 The prompts used for different parts of our workflow is available in `./autoe2e/prompts.py` file. We use the following prompt for context extraction:
