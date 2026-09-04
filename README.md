@@ -376,6 +376,115 @@ python tools/verify_hooks.py EPIC_STACK      # one
 It runs the same `Config`, driver and `run_hooks` that a crawl would, then stops — so a pass means
 the pre-crawl phase works, with no LLM spend.
 
+### Browser configuration
+
+The `browser` section of a subject config. Chrome used to be hardcoded headed with
+`detach: True`, which opened a visible window per run and left the browser alive after the
+driver exited.
+
+| key | default | meaning |
+|---|---|---|
+| `headless` | `false` | run Chrome with `--headless=new` |
+| `detach` | `false` | leave the browser running after the driver exits — debugging only |
+| `page_load_timeout` | `30` | seconds, passed to `set_page_load_timeout` |
+| `implicit_wait` | `5` | seconds, passed to `implicitly_wait` |
+| `window_size` | `"1920,1080"` | `--window-size`; pinned because headless otherwise picks a small viewport, which changes which elements count as visible and therefore which actions are discovered |
+
+All five experiment configs declare the experiment profile:
+
+```json
+"browser": { "headless": true, "detach": false }
+```
+
+`detach` now defaults to **false**, a deliberate change from the old hardcoded `true`: a detached
+browser survives `driver.quit()` and leaks a process per run. Debugging can still ask for
+`{"headless": false, "detach": true}` explicitly.
+
+`driver.quit()` is guaranteed. `main.py` tears down in a `finally` block and catches
+`BaseException`, so a `KeyboardInterrupt` reaches teardown instead of skipping it;
+`shutdown_driver_container()` is idempotent, never raises, and clears the singleton.
+
+    python tools/browser_smoke.py                    # launch, navigate, tear down, check for leaks
+    python tools/browser_smoke.py --config TODOMVC   # use a subject's real profile
+
+It detects leftovers by diffing the process table around the launch rather than counting Chrome
+globally — a developer machine has plenty of unrelated Chrome processes, so a global count would
+prove nothing.
+
+### Crawl budget
+
+The `crawl` section. A run stops as soon as **any** configured limit is reached. Every limit
+defaults to `null` (unlimited), which is the behaviour before budgets existed, so an older config
+is unaffected.
+
+| key | default | meaning |
+|---|---|---|
+| `max_actions` | `null` | stop once this many actions have been executed |
+| `max_states` | `null` | stop once this many states have been discovered |
+| `max_wall_seconds` | `null` | stop once this much wall-clock time has elapsed |
+
+Limits are **inclusive** and checked *before* each action, so a declared budget is never
+overshot. Non-positive values are rejected at config-parse time.
+
+All five experiment configs declare the same budget:
+
+```json
+"crawl": { "max_actions": 500, "max_states": 100, "max_wall_seconds": 3600 }
+```
+
+**These three numbers are provisional.** They were chosen so the mechanism is exercised and the
+five subjects are directly comparable, not from any analysis of how much exploration is
+scientifically adequate. The only datapoint available is the July `REACT_BOILERPLATE` run, which
+reached 85 actions and 31 states in 4380 s and was still going, so on a large subject
+`max_wall_seconds` is the limit that binds first and the other two act as guards. Set them
+deliberately before the real evaluation.
+
+#### Graceful stop
+
+Reaching a budget is a declared stopping rule, not an error. On exhaustion the run:
+
+1. stops scheduling new exploration work — it breaks out of the action loop and the state loop,
+   so nothing further is dequeued or explored;
+2. keeps everything produced so far, in MongoDB and in the state graph;
+3. persists `report/<APP>.json` and `tmp/status_<APP>.json` normally, in the `finally` block;
+4. closes the browser via `shutdown_driver_container()`;
+5. exits **0**.
+
+Results are persisted *before* the browser is closed, so a failure to quit cannot cost the run's
+output. The exploration algorithm itself is unchanged — the budget only decides whether more work
+is scheduled.
+
+`tmp/status_<APP>.json` records a real terminal status. It previously only ever said `running` or
+`error`, which is why a finished July run is indistinguishable from one that died mid-flight —
+those files say `"status": "running"` with `current_state: "DONE"`.
+
+| status | exit code | meaning |
+|---|---|---|
+| `completed` | 0 | the queue drained |
+| `budget_exhausted` | 0 | a declared limit was reached |
+| `interrupted` | 130 | SIGINT/SIGTERM, or `KeyboardInterrupt` |
+| `failed` | 1 | an exception; `error` carries the message |
+
+Alongside it: `budget_triggered` (which limit fired, else `null`), `budget` (the limits in
+force), `actions_executed`, `states_discovered` and `elapsed_seconds`. `loop_counter` is kept as
+an alias of `actions_executed` so tooling that reads the older files still works.
+
+The mapping lives in `autoe2e/crawler/budget.py::classify_outcome`, kept as a pure function so
+the contract is unit-tested rather than buried in a script.
+
+### Tests
+
+```bash
+source .venv/bin/activate
+python -m pytest tests -q
+```
+
+43 focused tests covering budget evaluation and the outcome/exit-code contract
+(`tests/test_crawl_budget.py`), Chrome option construction without launching a browser
+(`tests/test_browser_config.py`), and config-section parsing including the ordering invariants in
+`main.py` (`tests/test_config_sections.py`). None of them needs a browser, a subject or an LLM
+credential.
+
 ### Known limitations affecting reproducibility
 
 - **`on_state_discovery` is still inert.** `lifecycle.on_visit` now runs (see *Lifecycle hooks*),
@@ -387,8 +496,6 @@ the pre-crawl phase works, with no LLM spend.
   `--user-data-dir`, so `localStorage` and IndexedDB begin empty every run. Subjects that gate their
   UI on client state (bangle-io renders only "Create a workspace to get started" with an empty
   database) present only that empty state unless seeded first.
-- **Chrome is not headless** and is created with `detach: True`, so runs open visible windows and
-  the browser outlives the process.
 - **One WebDriver per process.** `DriverContainer` is an `AbstractSingleton`, so
   `initialize_driver` returns the same browser for the life of the interpreter. `main.py` crawls a
   single `APP_NAME` per run so this is fine there, but a script handling several subjects must fork
