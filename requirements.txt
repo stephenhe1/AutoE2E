@@ -15,6 +15,8 @@ openai
 pandas
 Pillow
 pinecone-client==4.0.0
+# harness only: tools/bangle_seed_state.py drives the app to capture its client-state baseline
+playwright
 pymongo
 pytesseract==0.3.10
 pytest==7.3.1

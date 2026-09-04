@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------------------
 # VENDORED - do not edit here.
 #
-# Copied verbatim (this provenance block is the only addition) from:
+# Copied from (see LOCAL DEVIATIONS at the end of this block):
 #   repo    git@github.com:stephenhe1/UI-Graph-Explorer.git
 #   path    tools/bangle_seed_state.py
 #   commit  94e2734960ebef93c0e9b5900b788c2c3b7fab5c
@@ -17,6 +17,15 @@
 #
 # Behaviour is unchanged. Upstream is authoritative: re-sync from the commit above
 # rather than editing this copy.
+#
+# LOCAL DEVIATIONS (2 lines, so this file is NOT byte-identical to upstream):
+#   1. sys.path.insert now points at this script's OWN directory instead of
+#      <script dir>/../src, which does not exist in AutoE2E.
+#   2. `from ui_graph.restoration import _IDB_EXPORT_JS` becomes
+#      `from idb_export_js import _IDB_EXPORT_JS`, the vendored copy of that one
+#      constant (tools/idb_export_js.py).
+# Both changes exist solely to remove the runtime dependency on another checkout.
+# Observable behaviour is unchanged: the same JS string is evaluated.
 # ---------------------------------------------------------------------------
 """Capture bangle-io's prerequisite client state by driving the application's OWN creation flow.
 
@@ -50,11 +59,12 @@ import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+# vendored-dependency lookup: this script's own directory (see LOCAL DEVIATIONS above)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from playwright.async_api import async_playwright  # noqa: E402
 
-from ui_graph.restoration import _IDB_EXPORT_JS  # noqa: E402
+from idb_export_js import _IDB_EXPORT_JS  # noqa: E402
 
 # Pinned so the baseline does not change between captures. The application only ever displays or
 # orders by this value, so a fixed instant is as valid as the instant of capture.

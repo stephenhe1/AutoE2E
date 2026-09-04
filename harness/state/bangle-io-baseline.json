@@ -1,0 +1,43 @@
+{
+ "captured_landing_url": "http://127.0.0.1:5173/ws#route=ws-home&wsName=ugx-baseline",
+ "indexed_db": {
+  "bangle-io-db": {
+   "stores": {
+    "MiscTable": {
+     "autoIncrement": false,
+     "indexes": [],
+     "keyPath": "key",
+     "keys": [],
+     "records": []
+    },
+    "WorkspaceInfo": {
+     "autoIncrement": false,
+     "indexes": [],
+     "keyPath": "key",
+     "keys": [
+      "ugx-baseline"
+     ],
+     "records": [
+      {
+       "key": "ugx-baseline",
+       "lastModified": 1700000000000,
+       "value": {
+        "deleted": false,
+        "lastModified": 1700000000000,
+        "metadata": {},
+        "name": "ugx-baseline",
+        "type": "browser"
+       }
+      }
+     ]
+    }
+   },
+   "version": 2
+  }
+ },
+ "local_storage": {},
+ "observed_local_storage": {
+  "browser-local-storage-sync-database.sync:user-activity:times-app-loaded": "1"
+ },
+ "workspace": "ugx-baseline"
+}
