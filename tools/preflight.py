@@ -16,6 +16,7 @@ No secret is ever read or printed: credential checks report presence only.
 from __future__ import annotations
 
 import argparse
+import importlib
 import json
 import os
 import shutil
@@ -26,6 +27,12 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# The repository root must be importable regardless of the cwd this is invoked from,
+# otherwise `import autoe2e` fails with ModuleNotFoundError -- which reads like a missing
+# third-party package but is really a path problem.
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 # identity: a string that must appear in the response body. Schema-agnostic on purpose.
 SUBJECTS = [
@@ -117,7 +124,43 @@ def main() -> int:
 
         rows.append((label, base, ident, detail or "-"))
 
-    # ---- shared prerequisites ----
+    # ---- environment first: a missing package or the wrong interpreter explains every
+    # downstream failure, and "ModuleNotFoundError: No module named 'autoe2e'" reads exactly
+    # like an uninstalled dependency when it is really a path problem.
+    print("Environment")
+    venv_python = ROOT / '.venv' / 'bin' / 'python'
+    in_repo_venv = (Path(sys.executable).resolve() == venv_python.resolve()
+                    if venv_python.exists() else False)
+    print(f"  interpreter        {sys.executable} ({sys.version.split()[0]})")
+    print(f"  repo virtualenv    {'yes' if in_repo_venv else 'NO'}")
+    if not in_repo_venv and venv_python.exists():
+        notes.append(f"Not running under the repository virtualenv. If a dependency looks "
+                     f"missing, try: {venv_python} tools/preflight.py")
+
+    DEPS = ['dotenv', 'pymongo', 'selenium', 'langchain_core', 'langchain_openai',
+            'sentence_transformers', 'bs4', 'numpy']
+    missing = []
+    for mod in DEPS:
+        try:
+            importlib.import_module(mod)
+        except Exception as e:  # noqa: BLE001
+            missing.append(mod)
+            print(f"  dependency {mod:<24} MISSING ({type(e).__name__})")
+    if missing:
+        blocking.append(f"missing Python dependencies: {', '.join(missing)} "
+                        f"(pip install -r requirements.txt)")
+    else:
+        print(f"  dependencies       all {len(DEPS)} importable")
+
+    try:
+        importlib.import_module('autoe2e.crawler.config')
+        print("  autoe2e package    importable")
+    except Exception as e:  # noqa: BLE001
+        print(f"  autoe2e package    NOT IMPORTABLE ({type(e).__name__}: {e})")
+        blocking.append("the autoe2e package is not importable; run from the repository root "
+                        "or set PYTHONPATH to it")
+
+    print()
     print("Subjects")
     print(f"  {'subject':14} {'base_url':34} {'identity':10} detail")
     for label, base, ident, detail in rows:
@@ -125,15 +168,21 @@ def main() -> int:
 
     print("\nShared prerequisites")
 
-    # MongoDB
+    # MongoDB. A missing driver and an unreachable server are different problems with
+    # different fixes, so they are reported separately rather than both as "mongodb FAIL".
+    uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
     try:
         import pymongo
-        uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
-        pymongo.MongoClient(uri, serverSelectionTimeoutMS=4000).list_database_names()
-        print(f"  mongodb            ok ({uri})")
     except Exception as e:  # noqa: BLE001
-        print(f"  mongodb            FAIL ({type(e).__name__})")
-        blocking.append("MongoDB not reachable")
+        print(f"  mongodb            DRIVER MISSING (pymongo: {type(e).__name__})")
+        blocking.append("pymongo is not installed (pip install -r requirements.txt)")
+    else:
+        try:
+            pymongo.MongoClient(uri, serverSelectionTimeoutMS=4000).list_database_names()
+            print(f"  mongodb            ok ({uri})")
+        except Exception as e:  # noqa: BLE001
+            print(f"  mongodb            SERVER UNREACHABLE at {uri} ({type(e).__name__})")
+            blocking.append(f"MongoDB not reachable at {uri}; is mongod running?")
 
     # reset/seed sources
     rc = subprocess.run(["bash", str(ROOT / "tools" / "ensure_snapshots.sh"), "--check"],
@@ -161,8 +210,28 @@ def main() -> int:
             if line.startswith("LITELLM_API_KEY=") and line.split("=", 1)[1].strip():
                 dotenv_key = True
     op_present = shutil.which("op") is not None
+    # Length only -- never the value. A key far shorter than any real one is almost always a
+    # placeholder, which otherwise surfaces as a 401 on the crawl's first LLM call, after the
+    # browser is up and the previous run's rows have been cleared.
+    MIN_PLAUSIBLE = 16
+    key_len = 0
+    if env_key:
+        key_len = len(os.environ['LITELLM_API_KEY'].strip())
+    elif dotenv_key:
+        for line in dotenv.read_text().splitlines():
+            if line.startswith('LITELLM_API_KEY='):
+                key_len = len(line.split('=', 1)[1].strip())
+
     print(f"  LITELLM_API_KEY in environment  {'yes' if env_key else 'no'}")
     print(f"  LITELLM_API_KEY in .env         {'yes' if dotenv_key else 'no'}")
+    if key_len and key_len < MIN_PLAUSIBLE:
+        print(f"  value length                    {key_len} chars -- IMPLAUSIBLY SHORT")
+        notes.append(
+            f"LITELLM_API_KEY is present but only {key_len} characters, well under the "
+            f"{MIN_PLAUSIBLE} a real key would have. This looks like a placeholder; the crawl "
+            f"would fail on its first LLM call. (The value itself is never read or printed.)")
+    elif key_len:
+        print(f"  value length                    {key_len} chars (plausible)")
     print(f"  `op` CLI fallback available     {'yes (not invoked here)' if op_present else 'no'}")
     if not (env_key or dotenv_key):
         notes.append("No LITELLM_API_KEY in the environment or .env. autoe2e.llm_api_call falls "
