@@ -8,7 +8,7 @@
     "detach": false
   },
   "crawl": {
-    "max_actions": 500,
+    "max_actions": 100,
     "max_states": 100,
     "max_wall_seconds": 3600
   },
