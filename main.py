@@ -11,8 +11,9 @@ from autoe2e.infer_utils import *
 from autoe2e.loop_utils import *
 from autoe2e.mongo_utils import *
 from autoe2e.manual_ndd import *
-from autoe2e.llm_api_call import _resolve_api_key
+from autoe2e.llm_api_call import _resolve_api_key, configure_llm
 from autoe2e.browser import shutdown_driver_container
+from autoe2e.crawler.action import ActionExecutionError
 from autoe2e.crawler.budget import (
     BUDGET_REASONS,
     CrawlBudget,
@@ -28,6 +29,7 @@ START_TIME = time.time()
 LOOP_COUNTER = 0
 STOP_REQUESTED = False
 STOP_REASON = None      # a budget name, or 'interrupted'
+ACTION_FAILURES = []    # action-level execution failures that were skipped, not fatal
 EXIT_STATUS = 'failed'  # pessimistic until the run actually reaches an end state
 ERROR_MSG = None
 
@@ -114,6 +116,8 @@ def write_status(
         'status': 'failed' if error else status,
         'budget': BUDGET.describe() if BUDGET is not None else None,
         'budget_triggered': budget_triggered,
+        'action_execution_failures': len(ACTION_FAILURES),
+        'action_execution_failure_details': ACTION_FAILURES[-20:],
         'error': error,
     }
     with open(STATUS_FILE, 'w') as f:
@@ -131,6 +135,11 @@ try:
         raise ValueError('base_url is required in config')
 
     crawl_context = crawl_context.set_config(config_obj)
+
+    # Bound every LLM request before the first call. Models are built lazily, so this must run
+    # before any invocation. Without it a stalled request blocks forever and the crawl budget
+    # cannot intervene, because it is only checked at action boundaries.
+    configure_llm(config_obj)
 
     # Resolve the LLM credential up front. The crawl needs it for its very first state, and
     # everything below this line is either slow or destructive, so failing here is cheapest.
@@ -222,27 +231,45 @@ try:
                     values = create_form_filling_values(action)
                     action.set_params(values)
 
-                action.execute(crawl_context.driver)
+                # An action that cannot be executed is an action-level failure, not a crawl
+                # failure. ClickAction used to call driver.quit(); sys.exit(1) here, which ended
+                # the whole run over one stale control. The transition handling below is skipped
+                # so a failed click is never recorded as a successful transition, and the
+                # load_state() replay at the end of this iteration returns the browser to a known
+                # state before the next action.
+                execution_error = None
+                try:
+                    action.execute(crawl_context.driver)
+                except ActionExecutionError as action_err:
+                    execution_error = action_err
+                    ACTION_FAILURES.append(action_err.as_dict())
+                    logger.warn(
+                        f'Skipping action after execution failure '
+                        f'({len(ACTION_FAILURES)} so far): {action_err}')
 
-                new_actions = []
+                if execution_error is None:
+                    new_actions = []
 
-                for i in range(10):
-                    try:
-                        new_actions: list[Action] = CandidateActionExtractor.extract_candidate_actions(crawl_context.driver)
-                        break
-                    except:
-                        time.sleep(0.1)
+                    for i in range(10):
+                        try:
+                            new_actions: list[Action] = CandidateActionExtractor.extract_candidate_actions(crawl_context.driver)
+                            break
+                        except:
+                            time.sleep(0.1)
 
-                if len(new_actions) == 0:
-                    raise Exception("no new actions")
+                    if len(new_actions) == 0:
+                        raise Exception("no new actions")
 
-                new_state: State = crawl_context.create_state_from_driver(new_actions)
+                    new_state: State = crawl_context.create_state_from_driver(new_actions)
 
-                if not is_state_in_graph(crawl_context, new_state):
-                    print('Adding state', new_state.get_id(StateIdEvaluator.BY_ACTIONS))
-                    crawl_context.crawl_queue.enqueue(new_state)
-                    crawl_context.state_machine.add_state_from_current_state(new_state, action)
+                    if not is_state_in_graph(crawl_context, new_state):
+                        print('Adding state', new_state.get_id(StateIdEvaluator.BY_ACTIONS))
+                        crawl_context.crawl_queue.enqueue(new_state)
+                        crawl_context.state_machine.add_state_from_current_state(new_state, action)
+                    else:
+                        should_extract_func = False
                 else:
+                    # no execution, so no transition and no functionality attribution
                     should_extract_func = False
 
             if should_extract_func:
@@ -352,6 +379,7 @@ finally:
         f'{states_discovered} state(s) discovered, '
         f'{round(time.time() - START_TIME, 1)}s elapsed'
         + (f', budget_triggered={STOP_REASON}' if STOP_REASON in BUDGET_REASONS else '')
+        + (f', {len(ACTION_FAILURES)} action execution failure(s) skipped' if ACTION_FAILURES else '')
         + ' ==='
     )
 
