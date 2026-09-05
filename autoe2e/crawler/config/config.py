@@ -1,12 +1,14 @@
 from autoe2e.crawler.config.browser_config import BrowserConfig
 from autoe2e.crawler.config.crawl_config import CrawlConfig
 from autoe2e.crawler.config.driver_config import DriverConfig
+from autoe2e.crawler.config.llm_config import LLMConfig
 from autoe2e.crawler.config.lifecycle_config import LifecycleConfig
 
 
 class Config(
     BrowserConfig,
     CrawlConfig,
+    LLMConfig,
     DriverConfig,
     LifecycleConfig
 ):
@@ -18,6 +20,7 @@ class Config(
         # AttributeError on `config.on_visit` instead of defaulting to no hooks.
         BrowserConfig.__init__(self)
         CrawlConfig.__init__(self)
+        LLMConfig.__init__(self)
         DriverConfig.__init__(self)
         LifecycleConfig.__init__(self)
 
@@ -36,4 +39,6 @@ class Config(
             config_obj.browser_config_from_dict(config['browser'])
         if 'crawl' in config:
             config_obj.crawl_config_from_dict(config['crawl'])
+        if 'llm' in config:
+            config_obj.llm_config_from_dict(config['llm'])
         return config_obj

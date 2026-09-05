@@ -15,6 +15,38 @@ load_dotenv()
 
 LITELLM_BASE_URL = os.getenv("LITELLM_BASE_URL", "https://ete-litellm.ai-models.vpc-int.res.ibm.com")
 
+# Bounded request settings, applied to every model. Defaults match LLMConfig; a run overrides
+# them once via configure_llm() before the first LLM call.
+#
+# Without an explicit timeout a stalled request blocks forever: confirmed on KEYSTONE_BLOG, where
+# call #17 was sent, never returned, and the process sat at 0% CPU for ~41 minutes. The crawl
+# budget cannot help, because it is only evaluated at action boundaries. Worst case per call is
+# now REQUEST_TIMEOUT_SECONDS x (1 + MAX_RETRIES).
+REQUEST_TIMEOUT_SECONDS = 120.0
+MAX_RETRIES = 1
+
+
+def configure_llm(config=None, request_timeout_seconds=None, max_retries=None):
+    """Set the bounded request settings for this process. Call once, before any LLM use.
+
+    Models are built lazily, so this must run before the first invocation to take effect; it
+    logs the values so a run's log records what bounds were in force. It does not touch
+    credential resolution.
+    """
+    global REQUEST_TIMEOUT_SECONDS, MAX_RETRIES
+    if config is not None:
+        request_timeout_seconds = getattr(config, 'request_timeout_seconds', None)
+        max_retries = getattr(config, 'max_retries', None)
+    if request_timeout_seconds is not None:
+        REQUEST_TIMEOUT_SECONDS = float(request_timeout_seconds)
+    if max_retries is not None:
+        MAX_RETRIES = int(max_retries)
+    logger.info(
+        f'LLM request bounds: request_timeout_seconds={REQUEST_TIMEOUT_SECONDS} '
+        f'max_retries={MAX_RETRIES} '
+        f'(worst case {REQUEST_TIMEOUT_SECONDS * (1 + MAX_RETRIES)}s per call)')
+    return REQUEST_TIMEOUT_SECONDS, MAX_RETRIES
+
 
 def _get_litellm_api_key():
     key = os.getenv("LITELLM_API_KEY")
@@ -73,6 +105,8 @@ def _get_sonnet():
         temperature=0,
         base_url=LITELLM_BASE_URL,
         api_key=_resolve_api_key(),
+        request_timeout=REQUEST_TIMEOUT_SECONDS,
+        max_retries=MAX_RETRIES,
     )
 
 
@@ -83,6 +117,8 @@ def _get_haiku():
         temperature=0,
         base_url=LITELLM_BASE_URL,
         api_key=_resolve_api_key(),
+        request_timeout=REQUEST_TIMEOUT_SECONDS,
+        max_retries=MAX_RETRIES,
     )
 
 
