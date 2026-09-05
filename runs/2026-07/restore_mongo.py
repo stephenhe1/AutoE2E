@@ -26,6 +26,10 @@ EXPECTED = {"action-functionality": 220, "functionality": 57}
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--apply", action="store_true", help="actually write (default is a dry run)")
+    parser.add_argument("--app", action="append", default=None,
+                        help="restore ONLY this app (repeatable). Without it every app in the "
+                             "export is replaced, which is rarely what you want once other "
+                             "apps have current rows.")
     parser.add_argument("--uri", default=os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
     parser.add_argument("--db", default="myDatabase")
     args = parser.parse_args()
@@ -39,15 +43,27 @@ def main():
     for coll in COLLECTIONS:
         path = here / "mongo" / f"{coll}.json"
         docs = json_util.loads(path.read_text())
+        full_count = len(docs)
 
-        if len(docs) != EXPECTED[coll]:
+        if not args.app and full_count != EXPECTED[coll]:
             print(f"  !! {coll}: expected {EXPECTED[coll]} docs, export has {len(docs)}")
             failed = True
         if len({d["_id"] for d in docs}) != len(docs):
             print(f"  !! {coll}: duplicate _id in export")
             failed = True
 
+        if args.app:
+            wanted = set(args.app)
+            missing = wanted - {d["app"] for d in docs}
+            if missing:
+                print(f"  !! {coll}: export has no rows for {sorted(missing)}")
+                failed = True
+            docs = [d for d in docs if d["app"] in wanted]
+
         apps = sorted({d["app"] for d in docs})
+        if not apps:
+            print(f"  {coll}: nothing selected, skipping")
+            continue
         present = db[coll].count_documents({"app": {"$in": apps}})
         by_app = collections.Counter(d["app"] for d in docs)
 

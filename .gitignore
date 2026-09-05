@@ -181,3 +181,9 @@ tmp/*
 !tmp/status_REALWORLD.json
 !tmp/status_TASKCAFE.json
 !tmp/status_UMAMI.json
+
+# Run-scoped evaluation outputs from tools/run_isolated.py. The preserved July artifacts under
+# runs/2026-07/ are committed and stay tracked; everything else here is a run product.
+runs/*
+!runs/2026-07/
+!runs/2026-07/**
